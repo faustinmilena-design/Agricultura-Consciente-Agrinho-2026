@@ -1,0 +1,225 @@
+/* Modo escuro: troca as cores do site para tons escuros. */
+
+body.modo-escuro {
+ --cor-fundo: #0e1814;
+ --cor-superficie: #1a2c26;
+ --cor-superficie-alternada: #152820;
+ --cor-texto: #ecf8f1;
+ --cor-texto-secundario: #b8d4c8;
+ --cor-borda: #3a5a50;
+ --cor-verde: #5cb88a;
+ --cor-verde-escuro: #8fd4b0;
+
+ --cor-menu-acessibilidade-claro: #5cb88a;
+ --cor-menu-acessibilidade-escuro: #2a5c3a;
+ --cor-menu-acessibilidade-claro-ao-passar: #6ed49a;
+ --cor-menu-acessibilidade-escuro-ao-passar: #3d8f55;
+ --cor-menu-acessibilidade-sombra-anel: rgba(92, 184, 138, 0.25);
+ --cor-menu-acessibilidade-sombra: rgba(0, 0, 0, 0.45);
+
+ --cor-cabecalho-fundo: rgba(8, 20, 14, 0.98);
+ --cor-cabecalho-borda: #2f4a36;
+ --cor-cabecalho-marca: #d8f0e4;
+ --cor-cabecalho-link: #e8f5ec;
+ --cor-cabecalho-link-fundo-ao-passar: #3d5a50;
+ --cor-cabecalho-link-texto-ao-passar: #f5fff8;
+
+ --cor-banner-degrade-topo: #1a2820;
+ --cor-banner-descricao: #d1e8da;
+ --cor-banner-destaque-radial: rgba(92, 184, 138, 0.14);
+ --cor-banner-caixa-fundo: rgba(26, 44, 38, 0.92);
+ --cor-banner-caixa-borda: #3d5d52;
+ --cor-banner-caixa-texto: #f0fff4;
+
+ --cor-faixa-sobreposicao: rgba(4, 10, 6, 0.78);
+ --cor-faixa-borda: rgba(255, 255, 255, 0.28);
+ --cor-faixa-texto: #ecf8f1;
+
+ --cor-botao-chamada-fundo: #1e342c;
+ --cor-botao-chamada-fundo-ao-passar: #284438;
+ --cor-botao-chamada-texto: #d8f0e4;
+
+ --cor-aviso-fundo: #3d3520;
+ --cor-aviso-borda: #c9a227;
+ --cor-aviso-texto: #fff3c4;
+
+ --cor-rodape-fundo: #0a1410;
+ --cor-rodape-texto-secundario: #b8d4c8;
+ --cor-rodape-link: #9ee7c7;
+ --cor-rodape-link-ao-passar: #d4fce4;
+ --cor-rodape-borda-superior: #2f4a36;
+
+ --cor-grafico-hoje-inicio: #5a9fd4;
+ --cor-grafico-hoje-fim: #1e5a8a;
+ --cor-grafico-hoje-sombra: rgba(30, 90, 138, 0.45);
+ --cor-grafico-meta-inicio: #8bc96a;
+ --cor-grafico-meta-fim: #4a7a32;
+ --cor-grafico-meta-borda: #6a9a4a;
+
+ --cor-flash-card-painel-1: #1a2c26;
+ --cor-flash-card-painel-2: #152820;
+ --cor-flash-card-painel-3: #0e1814;
+ --cor-flash-card-fundo: #243830;
+ --cor-flash-card-borda: rgba(255, 255, 255, 0.22);
+ --cor-flash-card-borda-ao-passar: #e8c96a;
+ --cor-flash-card-borda-ativo: #ffda58;
+ --cor-flash-card-destaque: #d8f0c4;
+
+ --cor-comparador-texto: #f4fff4;
+ --cor-comparador-divisor-anel: rgba(0, 0, 0, 0.35);
+ --cor-comparador-etiqueta-sombra-texto: rgba(0, 0, 0, 0.75);
+ --cor-comparador-etiqueta-fundo: rgba(0, 0, 0, 0.55);
+
+ --cor-escolha-perfil-ativo-anel: rgba(92, 184, 138, 0.35);
+
+ --cor-simulacao-alerta-borda: #e08a3a;
+ --cor-simulacao-melhora-lenta-borda: #d4a82a;
+ --cor-simulacao-sustentavel-borda: #4caf7a;
+
+ --cor-painel-ods-fundo: #1a2c26;
+ --cor-painel-ods-borda: #3d5d52;
+ --cor-painel-ods-item-borda: #5cb88a;
+
+ --sombra-padrao: 0 10px 24px rgba(0, 0, 0, 0.35);
+ --sombra-leve: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+ --cor-voltar-topo-fundo: var(--cor-menu-acessibilidade-escuro);
+ --cor-voltar-topo-texto: var(--cor-texto-sobre-verde);
+ --cor-voltar-topo-borda: var(--cor-menu-acessibilidade-borda);
+ --cor-voltar-topo-fundo-ao-passar: var(--cor-menu-acessibilidade-escuro-ao-passar);
+ --sombra-botao-chamada: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+body.modo-escuro {
+ background-color: var(--cor-fundo);
+ color: var(--cor-texto);
+}
+
+body.modo-escuro p {
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .frase-faixa-cronometro strong {
+ color: var(--cor-verde-escuro);
+}
+
+body.modo-escuro .cronometro-agenda-rotulo {
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .selo-tema {
+ color: var(--cor-verde-escuro);
+}
+
+body.modo-escuro .cartao-escolha-perfil strong {
+ color: var(--cor-verde-escuro);
+}
+
+body.modo-escuro .cartao-escolha-perfil-texto > span {
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-texto > span, body.modo-escuro .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-texto > span, body.modo-escuro .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-texto > span, body.modo-escuro .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-acao, body.modo-escuro .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-acao, body.modo-escuro .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-acao {
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.modo-escuro .perfil-selecionado-msg {
+ color: var(--cor-verde-escuro);
+}
+
+body.modo-escuro .item-painel-ods {
+ background: #3a4540;
+}
+
+body.modo-escuro .caixa-explicacao-painel-ods {
+ background: rgba(8, 18, 14, 0.96);
+ color: var(--cor-banner-caixa-texto);
+}
+
+body.modo-escuro .texto-instrucao-painel-ods {
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .titulo-painel-ods {
+ color: var(--cor-verde-escuro);
+}
+
+body.modo-escuro .comparador-legenda-futuro {
+ background: var(--cor-superficie-alternada);
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .opcoes-acessibilidade.ativo {
+ background: var(--cor-verde-escuro);
+ border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.modo-escuro:not(.alto-contraste) .opcoes-acessibilidade.ativo .btn-opcao {
+ background-color: rgba(252, 253, 252, 0.97);
+ color: #142822;
+ border-color: rgba(255, 255, 255, 0.28);
+}
+
+body.modo-escuro .grafico-barra-usuario {
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+body.modo-escuro .painel-flash-card {
+ background: var(--cor-superficie) !important;
+ background-image: none !important;
+ border: 1px solid var(--cor-borda);
+ box-shadow: var(--sombra-padrao);
+}
+
+body.modo-escuro .titulo-flash-card-painel, body.modo-escuro .intro-flash-card-painel, body.modo-escuro .progresso-flash-card {
+ color: var(--cor-texto);
+}
+
+body.modo-escuro .progresso-flash-card {
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .flash-card {
+ background-color: var(--cor-flash-card-fundo);
+ border-color: var(--cor-borda);
+}
+
+body.modo-escuro .frente-flash-card, body.modo-escuro .verso-flash-card {
+ background: var(--cor-flash-card-fundo);
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.modo-escuro .categoria-flash-card, body.modo-escuro .dica-virar-flash-card {
+ color: var(--cor-texto-secundario);
+}
+
+body.modo-escuro .texto-verso-flash-card, body.modo-escuro .texto-verso-flash-card p {
+ color: var(--cor-texto);
+}
+
+body.modo-escuro .flash-card-nota {
+ color: var(--cor-flash-card-borda-ao-passar);
+}
+
+body.modo-escuro .flash-card-destaque {
+ color: var(--cor-verde-escuro);
+}
+
+/* Botao topo no modo escuro: mesmas cores do menu de acessibilidade. */
+body.modo-escuro:not(.alto-contraste) .botao-voltar-topo {
+ background: linear-gradient(
+ 155deg, var(--cor-menu-acessibilidade-claro) 0%, var(--cor-menu-acessibilidade-escuro) 100%
+ );
+ color: var(--cor-texto-sobre-verde);
+ border-color: var(--cor-menu-acessibilidade-borda);
+ box-shadow:
+ 0 0 0 1px var(--cor-menu-acessibilidade-sombra-anel), 0 4px 16px var(--cor-menu-acessibilidade-sombra);
+}
+
+body.modo-escuro:not(.alto-contraste) .botao-voltar-topo:hover, body.modo-escuro:not(.alto-contraste) .botao-voltar-topo:focus-visible {
+ background: linear-gradient(
+ 155deg, var(--cor-menu-acessibilidade-claro-ao-passar) 0%, var(--cor-menu-acessibilidade-escuro-ao-passar) 100%
+ );
+ color: var(--cor-texto-sobre-verde);
+ border-color: var(--cor-menu-acessibilidade-borda);
+}

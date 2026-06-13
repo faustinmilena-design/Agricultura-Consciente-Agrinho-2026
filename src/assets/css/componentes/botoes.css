@@ -1,0 +1,47 @@
+/* Botoes globais e botao de chamada do banner. */
+
+.botao {
+ border: 0;
+ border-radius: var(--raio-pilula-completo);
+ font-weight: 700;
+ padding: 0.78rem 1.2rem;
+ cursor: pointer;
+ transition: transform 0.15s ease, filter 0.2s ease;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.botao:hover {
+ transform: translateY(-1px);
+ filter: brightness(1.03);
+}
+
+.botao:focus-visible {
+ outline: 3px solid var(--cor-foco-acessivel);
+ outline-offset: 2px;
+}
+
+.botao-chamada-metodologia {
+ background: var(--cor-botao-chamada-fundo);
+ color: var(--cor-botao-chamada-texto);
+ border: 2px solid var(--cor-painel-ods-item-borda);
+ box-shadow: var(--sombra-botao-chamada);
+ font-size: 1rem;
+ padding: 0.82rem 1.28rem;
+ animation: pulso-suave 1.9s ease-in-out infinite;
+}
+
+.botao-chamada-metodologia:hover {
+ background: var(--cor-botao-chamada-fundo-ao-passar);
+ transform: translateY(-2px) scale(1.02);
+}
+
+@keyframes pulso-suave {
+ 0%, 100% {
+ transform: scale(1);
+ }
+ 50% {
+ transform: scale(1.03);
+ }
+}

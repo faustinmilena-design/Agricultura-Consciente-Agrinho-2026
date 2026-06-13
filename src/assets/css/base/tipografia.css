@@ -1,0 +1,54 @@
+/* Tamanhos de titulos e paragrafos usados em todo o site. */
+
+html {
+ scroll-padding-top: var(--espaco-ancora);
+}
+
+body {
+ font-family: var(--fonte-corpo);
+ color: var(--cor-texto);
+ background: var(--cor-fundo);
+ line-height: 1.6;
+}
+
+h1, h2, h3 {
+ line-height: 1.2;
+ margin: 0 0 0.75rem;
+ text-align: center;
+}
+
+h1 {
+ font-family: var(--fonte-titulo);
+ font-weight: 700;
+ letter-spacing: 0.2px;
+}
+
+p {
+ margin: 0 0 1rem;
+ color: var(--cor-texto-secundario);
+}
+
+.area-central {
+ width: min(100% - 2rem, var(--largura-maxima-conteudo));
+ margin-inline: auto;
+}
+
+.bloco-conteudo {
+ padding: var(--espacamento-bloco-secao) 0;
+ scroll-margin-top: var(--espaco-ancora);
+}
+
+.bloco-conteudo-alternado {
+ background: var(--cor-superficie-alternada);
+}
+
+#inicio {
+ scroll-margin-top: var(--espaco-ancora);
+}
+
+.bloco-conteudo > .area-central > p, .bloco-conteudo-alternado > .area-central > p {
+ text-align: justify;
+ text-justify: inter-word;
+ max-width: 90ch;
+ margin-inline: auto;
+}

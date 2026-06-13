@@ -1,0 +1,255 @@
+/* Comparador de duas fotos antes/depois e simulacao no resultado. */
+
+/* Seção Futuro do campo: duas fotos e seta entre elas. */
+
+.comparador-cenarios {
+ margin-top: 1rem;
+}
+
+/* Linha entre as fotos começa no meio; o JavaScript move ao arrastar. */
+.comparador-educativo {
+ --corte: 50%;
+ position: relative;
+ width: 100%;
+ aspect-ratio: 16 / 9;
+ max-height: min(56vw, 420px);
+ border-radius: var(--raio-borda);
+ overflow: hidden;
+ border: 1px solid var(--cor-borda);
+ box-shadow: var(--sombra-padrao);
+ touch-action: none;
+ user-select: none;
+}
+
+.comparador-foto {
+ display: block;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ pointer-events: none;
+}
+
+.comparador-foto-fundo {
+ position: absolute;
+ inset: 0;
+}
+
+.comparador-foto-revelada {
+ position: absolute;
+ inset: 0;
+ z-index: 1;
+ clip-path: inset(0 calc(100% - var(--corte)) 0 0);
+}
+
+.comparador-alca {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: var(--corte);
+ z-index: 4;
+ width: 3rem;
+ transform: translateX(-50%);
+ pointer-events: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.comparador-alca::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 50%;
+ width: 4px;
+ transform: translateX(-50%);
+ background: var(--cor-comparador-texto);
+ box-shadow: 0 0 0 1px var(--cor-comparador-divisor-anel);
+}
+
+.comparador-alca-polegar {
+ position: relative;
+ z-index: 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-width: 2.85rem;
+ height: 2.85rem;
+ padding: 0.35rem;
+ border-radius: var(--raio-pilula-completo);
+ background: var(--cor-comparador-texto);
+ border: 3px solid var(--cor-comparador-divisor-anel);
+ box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.comparador-icone-arraste {
+ display: block;
+ width: 1.75rem;
+ height: 1.75rem;
+ pointer-events: none;
+}
+
+.comparador-controle-range {
+ position: absolute;
+ inset: 0;
+ z-index: 5;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ opacity: 0;
+ cursor: ew-resize;
+ -webkit-appearance: none;
+ appearance: none;
+}
+
+.comparador-controle-range:focus-visible {
+ opacity: 0.15;
+ outline: none;
+}
+
+.comparador-controle-range:focus-visible ~ .comparador-alca .comparador-alca-polegar {
+ outline: 3px solid var(--cor-foco-acessivel);
+ outline-offset: 2px;
+}
+
+
+.comparador-etiqueta {
+ position: absolute;
+ bottom: 0.75rem;
+ z-index: 6;
+ pointer-events: none;
+ font-size: 0.78rem;
+ font-weight: 700;
+ color: var(--cor-comparador-texto);
+ text-shadow: 0 1px 4px var(--cor-comparador-etiqueta-sombra-texto);
+ padding: 0.25rem 0.5rem;
+ border-radius: var(--raio-etiqueta-comparador);
+ background: var(--cor-comparador-etiqueta-fundo);
+ max-width: 42%;
+ line-height: 1.25;
+}
+
+.comparador-etiqueta-sustentavel {
+ left: 0.75rem;
+}
+
+.comparador-etiqueta-alerta {
+ right: 0.75rem;
+}
+
+.comparador-resultado-wrap {
+ margin: 1.5rem 0;
+}
+
+.comparador-resultado-intro {
+ text-align: center;
+ max-width: 40rem;
+ margin-inline: auto;
+}
+
+.simulacao-futuro-campo {
+ margin: 0 auto;
+ max-width: 100%;
+ border-radius: var(--raio-borda);
+ overflow: hidden;
+ border: 3px solid var(--cor-borda);
+ box-shadow: var(--sombra-padrao);
+}
+
+.simulacao-futuro-campo img {
+ display: block;
+ width: 100%;
+ height: auto;
+ max-height: min(36vw, 320px);
+ aspect-ratio: 16 / 9;
+ object-fit: cover;
+ object-position: center center;
+}
+
+/* Foto r1: solo seco na parte de baixo. */
+.comparador-resultado-wrap.simulacao-alerta .simulacao-futuro-campo img {
+ object-position: center 88%;
+}
+
+/* Foto r2: milho no centro. */
+.comparador-resultado-wrap.simulacao-melhora-lenta .simulacao-futuro-campo img {
+ object-position: center center;
+}
+
+/* Foto r3: mata e lago na parte de baixo. */
+.comparador-resultado-wrap.simulacao-promissor .simulacao-futuro-campo img {
+ object-position: center 78%;
+}
+
+/* Foto r4: vacas no centro e embaixo. */
+.comparador-resultado-wrap.simulacao-sustentavel .simulacao-futuro-campo img {
+ object-position: center 62%;
+}
+
+@media (max-width: 900px) {
+ .simulacao-futuro-campo img {
+ max-height: min(42vw, 240px);
+ }
+}
+
+@media (max-width: 640px) {
+ .comparador-educativo {
+ max-height: min(56vw, 280px);
+ }
+
+ .comparador-etiqueta {
+ font-size: 0.7rem;
+ max-width: 46%;
+ bottom: 0.5rem;
+ padding: 0.2rem 0.4rem;
+ }
+
+ .comparador-etiqueta-sustentavel {
+ left: 0.5rem;
+ }
+
+ .comparador-etiqueta-alerta {
+ right: 0.5rem;
+ }
+
+ .simulacao-futuro-campo img {
+ max-height: min(48vw, 200px);
+ }
+}
+
+@media (max-width: 480px) {
+ .simulacao-futuro-campo img {
+ max-height: 11.5rem;
+ }
+}
+
+.comparador-legenda-futuro {
+ display: block;
+ padding: 0.65rem 1rem;
+ font-size: 0.95rem;
+ text-align: center;
+ background: var(--cor-superficie);
+ color: var(--cor-texto);
+ border-top: 1px solid var(--cor-borda);
+ line-height: 1.45;
+}
+
+.comparador-legenda-score {
+ margin: 0;
+}
+
+.comparador-resultado-wrap.simulacao-alerta .simulacao-futuro-campo {
+ border-color: var(--cor-simulacao-alerta-borda);
+}
+
+.comparador-resultado-wrap.simulacao-melhora-lenta .simulacao-futuro-campo {
+ border-color: var(--cor-simulacao-melhora-lenta-borda);
+}
+
+.comparador-resultado-wrap.simulacao-promissor .simulacao-futuro-campo {
+ border-color: var(--cor-verde);
+}
+
+.comparador-resultado-wrap.simulacao-sustentavel .simulacao-futuro-campo {
+ border-color: var(--cor-simulacao-sustentavel-borda);
+}

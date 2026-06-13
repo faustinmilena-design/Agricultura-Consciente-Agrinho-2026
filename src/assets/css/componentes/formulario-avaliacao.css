@@ -1,0 +1,249 @@
+/* Formulario de autoavaliação e área de resultado. */
+
+#formulario-avaliacao {
+ margin-top: 1rem;
+ background: var(--cor-superficie);
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda);
+ padding: 1rem;
+ box-shadow: var(--sombra-padrao);
+ text-align: center;
+}
+
+#formulario-avaliacao .nota-formulario {
+ text-align: center;
+}
+
+#formulario-avaliacao select, #formulario-avaliacao input[type="text"] {
+ width: 100%;
+ padding: 0.55rem 0.65rem;
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda-pequeno);
+ font: inherit;
+}
+
+fieldset {
+ border: 0;
+ margin: 0 0 1rem;
+ padding: 0;
+}
+
+legend {
+ font-weight: 700;
+ margin-bottom: 0.75rem;
+}
+
+label {
+ display: block;
+ margin-top: 0.9rem;
+ margin-bottom: 0.3rem;
+ font-weight: 600;
+ color: var(--cor-texto);
+}
+
+.nota-formulario {
+ margin-top: 0.7rem;
+ font-size: 0.92rem;
+}
+
+#resultado .area-central {
+ background: var(--cor-superficie);
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda);
+ padding: 1rem;
+}
+
+
+.fieldset-perfil, .fieldset-dimensoes {
+ text-align: center;
+ border: none;
+ padding: 0;
+ margin: 0;
+}
+
+.fieldset-perfil legend, .fieldset-dimensoes legend {
+ text-align: center;
+ width: 100%;
+ padding: 0 0.5rem;
+ margin-bottom: 0.75rem;
+ font-weight: 700;
+}
+
+.fieldset-perfil {
+ margin-bottom: 1.25rem;
+ padding-bottom: 0.25rem;
+}
+
+.fieldset-perfil label {
+ text-align: center;
+}
+
+.fieldset-perfil input, .fieldset-perfil select {
+ margin-inline: auto;
+ display: block;
+ max-width: 420px;
+}
+
+.fieldset-dimensoes {
+ display: grid;
+ gap: 1rem;
+}
+
+.cartao-dimensao {
+ background: var(--cor-superficie-alternada);
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda-medio);
+ padding: var(--espacamento-medio);
+ text-align: center;
+}
+
+.cartao-dimensao h3 {
+ text-align: center;
+ margin-bottom: 0.35rem;
+}
+
+.pergunta-dimensao {
+ font-size: 0.95rem;
+ margin-bottom: 0.5rem;
+ text-align: center;
+}
+
+.rotulo-escala-pilulas {
+ font-size: 0.92rem;
+ font-weight: 600;
+ margin: 0.5rem 0 0.4rem;
+}
+
+.escala-pilulas {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 0.45rem;
+ margin-bottom: 0.5rem;
+}
+
+.pilula-nota {
+ min-width: 2.5rem;
+ padding: 0.45rem 0.65rem;
+ border: 2px solid var(--cor-borda);
+ border-radius: var(--raio-pilula-completo);
+ background: var(--cor-superficie);
+ color: var(--cor-texto);
+ font: inherit;
+ font-weight: 700;
+ cursor: pointer;
+ transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.pilula-nota:hover {
+ border-color: var(--cor-verde);
+ background: var(--cor-superficie-alternada);
+}
+
+.pilula-nota-ativa {
+ border-color: var(--cor-verde);
+ background: var(--cor-verde);
+ color: var(--cor-texto-sobre-verde);
+}
+
+.nivel-dimensao-descricao {
+ font-size: 0.9rem;
+ font-style: italic;
+ margin-top: 0.35rem;
+ margin-bottom: 0;
+ text-align: center;
+ max-width: 36rem;
+ margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+ #formulario-avaliacao, #resultado .area-central {
+ padding: 0.85rem 0.65rem;
+ }
+
+ .cartao-dimensao {
+ padding: 0.85rem 0.65rem;
+ }
+
+ .pergunta-dimensao {
+ font-size: 0.9rem;
+ line-height: 1.45;
+ }
+
+ .pilula-nota {
+ min-width: 2.35rem;
+ padding: 0.42rem 0.55rem;
+ }
+
+ .escala-pilulas {
+ gap: 0.35rem;
+ }
+}
+
+@media (max-width: 480px) {
+ .pilula-nota {
+ min-width: 2.1rem;
+ padding: 0.38rem 0.48rem;
+ font-size: 0.88rem;
+ }
+
+ .escala-pilulas {
+ justify-content: center;
+ flex-wrap: wrap;
+ max-width: 100%;
+ }
+}
+
+.dica-contexto-perfil {
+ margin: 0.5rem auto 0.85rem;
+ max-width: 420px;
+ padding: 0;
+ font-size: 0.92rem;
+ line-height: 1.5;
+ color: var(--cor-texto-secundario);
+ text-align: center;
+}
+
+.aviso-nome-resultado {
+ margin: 0.75rem auto 0;
+ max-width: 32rem;
+ padding: 0.55rem 0.75rem;
+ border-radius: var(--raio-borda-pequeno);
+ background: var(--cor-aviso-fundo);
+ border: 1px solid var(--cor-aviso-borda);
+ color: var(--cor-aviso-texto);
+ font-size: 0.92rem;
+ text-align: center;
+}
+
+.fieldset-dimensoes-bloqueado {
+ opacity: 0.58;
+ pointer-events: none;
+ user-select: none;
+}
+
+.fieldset-dimensoes-bloqueado .pilula-nota {
+ cursor: not-allowed;
+}
+
+.painel-resultado h3 {
+ margin-top: 1.25rem;
+ font-size: 1.1rem;
+}
+
+.resultado-score {
+ font-size: 1.05rem;
+ text-align: center;
+}
+
+.narrativa-resultado {
+ text-align: center;
+ max-width: 40rem;
+ margin-inline: auto;
+}
+
+.perfil-resultado {
+ text-align: center;
+ max-width: 40rem;
+ margin-inline: auto;
+}

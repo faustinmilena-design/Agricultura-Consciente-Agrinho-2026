@@ -1,0 +1,489 @@
+{
+  "meta": {
+    "versao": "1.1",
+    "notaReferencia": "A barra verde (Meta) mostra o objetivo de equilíbrio sustentável em cada área (nota 5). A barra azul (Hoje) é o que você marcou no formulário. Quanto mais perto do topo, mais perto da meta."
+  },
+  "perfilProdutor": {
+    "titulo": "Quem está avaliando",
+    "campos": [
+      {
+        "id": "nomeProdutor",
+        "tipo": "text",
+        "rotulo": "Seu nome",
+        "placeholder": "Escreva seu nome aqui",
+        "obrigatorio": true
+      },
+      {
+        "id": "nomePropriedade",
+        "tipo": "text",
+        "rotulo": "Nome da propriedade (opcional)",
+        "placeholder": "Chácara, sítio ou nome usado na família"
+      },
+      {
+        "id": "tipoCultivo",
+        "tipo": "select",
+        "rotulo": "Atividade principal na propriedade",
+        "opcoes": [
+          {
+            "valor": "mista",
+            "texto": "Produção mista, lavoura e pecuária"
+          },
+          {
+            "valor": "hortalias",
+            "texto": "Olericultura / hortaliças"
+          },
+          {
+            "valor": "graos",
+            "texto": "Grãos e cereais (milho, soja, feijão…)"
+          },
+          {
+            "valor": "fruticultura",
+            "texto": "Fruticultura ou cafeicultura"
+          },
+          {
+            "valor": "pecuaria",
+            "texto": "Pecuária, corte ou leite"
+          }
+        ]
+      },
+      {
+        "id": "tamanhoPropriedade",
+        "tipo": "select",
+        "rotulo": "Tamanho aproximado da área produtiva",
+        "opcoes": [
+          {
+            "valor": "ate5",
+            "texto": "Até 5 hectares"
+          },
+          {
+            "valor": "5a20",
+            "texto": "Entre 5 e 20 hectares"
+          },
+          {
+            "valor": "acima20",
+            "texto": "Acima de 20 hectares"
+          }
+        ]
+      }
+    ],
+    "textosPorCultivo": {
+      "mista": "Na integração lavoura–pecuária, equilibrar água, solo e resíduos orgânicos costuma gerar ganhos rápidos na propriedade.",
+      "hortalias": "Em hortaliças, o manejo da água e a cobertura do solo impactam diretamente a qualidade e a regularidade da colheita.",
+      "graos": "Em grãos, rotação de culturas e energia no beneficiamento são pontos centrais para produção com menos desperdício.",
+      "fruticultura": "Em fruticultura, biodiversidade e manejo de resíduos ajudam a reduzir pragas e manter a produtividade.",
+      "pecuaria": "Na pecuária, energia, resíduos e áreas de preservação influenciam custos e relação com o entorno."
+    }
+  },
+  "perfilConsumidor": {
+    "titulo": "Sua rotina em casa e no consumo",
+    "campos": [
+      {
+        "id": "nomeConsumidor",
+        "tipo": "text",
+        "rotulo": "Seu nome",
+        "placeholder": "Escreva seu nome aqui",
+        "obrigatorio": true
+      },
+      {
+        "id": "contextoConsumo",
+        "tipo": "select",
+        "rotulo": "Relação com o agro e a alimentação",
+        "opcoes": [
+          {
+            "valor": "familia",
+            "texto": "Consumo familiar, cidade ou interior"
+          },
+          {
+            "valor": "estudante",
+            "texto": "Estudante"
+          },
+          {
+            "valor": "comercio",
+            "texto": "Comércio ou preparo de alimentos"
+          },
+          {
+            "valor": "interesse",
+            "texto": "Interesse em agro e sustentabilidade"
+          }
+        ]
+      }
+    ],
+    "textosPorContexto": {
+      "familia": "Hoje, na mesa e em casa, suas escolhas se ligam ao mesmo sistema alimentar que sustenta a agricultura familiar.",
+      "estudante": "Entender sustentabilidade no que você consome hoje ajuda a valorizar quem produz e a Agenda 2030.",
+      "comercio": "No dia a dia, quem comercializa ou prepara alimentos pode reduzir perdas e apoiar produtores locais.",
+      "interesse": "Buscar informação sobre agro sustentável já é um passo para alinhar consumo e cuidado com o meio ambiente."
+    }
+  },
+  "dimensoesProdutor": [
+    {
+      "id": "agua",
+      "titulo": "Água",
+      "pergunta": "Como você usa e cuida da água hoje na propriedade (chuva, rio, poço ou irrigação)?",
+      "niveis": {
+        "0": "Hoje não há controle: muito desperdício ou falta crônica de água.",
+        "1": "O uso é sem planejamento; há desperdício ou seca forte em períodos críticos.",
+        "2": "Há preocupação, mas poucas práticas fixas no dia a dia.",
+        "3": "Uso moderado com cuidados básicos: horários, mangueiras e manutenção.",
+        "4": "Já capta ou reaproveita água em parte da área; irrigação mais racional.",
+        "5": "Gestão integrada no cotidiano: captação, reuso e acompanhamento da demanda."
+      },
+      "referencia": 3,
+      "recomendacao": "Amplie a captação de chuva e revise vazamentos, mangueiras e horários de irrigação.",
+      "praticas": [
+        "captacao"
+      ]
+    },
+    {
+      "id": "solo",
+      "titulo": "Solo",
+      "pergunta": "Como está o manejo do solo hoje (cobertura, fertilidade, rotação ou integração)?",
+      "niveis": {
+        "0": "Solo muito degradado: erosão visível e sem recuperação em andamento.",
+        "1": "Solo exposto ou compactado; erosão aparece com facilidade.",
+        "2": "Cobertura parcial; pouca rotação e pouca matéria orgânica.",
+        "3": "Manejo básico: alguma cobertura e adubação planejada.",
+        "4": "Plantio direto ou rotação em parte da área; boa matéria orgânica.",
+        "5": "Solo bem cuidado: cobertura frequente, rotação e acompanhamento da fertilidade."
+      },
+      "referencia": 3,
+      "recomendacao": "Mantenha o solo coberto, rode culturas e transforme resíduos em composto na propriedade.",
+      "praticas": [
+        "silagem",
+        "compostagem"
+      ]
+    },
+    {
+      "id": "energia",
+      "titulo": "Energia",
+      "pergunta": "Como você controla o uso de energia hoje (bomba, resfriamento, secagem, máquinas)?",
+      "niveis": {
+        "0": "Consumo alto sem controle; equipamentos velhos ou ligados sem necessidade.",
+        "1": "Pouco controle; uso desnecessário ou equipamentos antigos.",
+        "2": "Há uso elevado, mas eficiência ainda não é prioridade.",
+        "3": "Medidas simples no cotidiano: horários definidos e manutenção básica.",
+        "4": "Consumo acompanhado; melhorias pontuais em motores e iluminação.",
+        "5": "Uso planejado e eficiente; fontes renováveis quando viável."
+      },
+      "referencia": 3,
+      "recomendacao": "Mapeie o que mais gasta energia e organize horários de bomba, secador e máquinas.",
+      "praticas": []
+    },
+    {
+      "id": "residuos",
+      "titulo": "Resíduos",
+      "pergunta": "Como você trata resíduos orgânicos e embalagens na propriedade hoje?",
+      "niveis": {
+        "0": "Quase tudo vai para o lixo ou é queimado, sem reaproveitamento.",
+        "1": "Grande parte descartada ou queimada sem critério.",
+        "2": "Separação irregular; pouco retorno de orgânico ao solo.",
+        "3": "Parte dos orgânicos vira adubo; descarte dos demais é razoável.",
+        "4": "Compostagem ou biodigestor em uso; menos resíduo enviado para fora.",
+        "5": "Quase tudo reaproveitado na propriedade, pouco desperdício."
+      },
+      "referencia": 3,
+      "recomendacao": "Separe orgânico e seco e volte restos de lavoura ao solo como composto.",
+      "praticas": [
+        "compostagem"
+      ]
+    },
+    {
+      "id": "biodiversidade",
+      "titulo": "Biodiversidade",
+      "pergunta": "Como você cuida de matas, nascentes, corredores e polinizadores na propriedade hoje?",
+      "niveis": {
+        "0": "Não há áreas verdes protegidas ou houve supressão recente.",
+        "1": "Quase nenhuma vegetação nativa preservada.",
+        "2": "Pouca vegetação nativa; predomina monocultura.",
+        "3": "Algumas árvores e talhões com preservação pontual.",
+        "4": "Matas ciliares ou capoeiras protegidas; menos agrotóxicos no manejo.",
+        "5": "Corredores e diversidade integrados à produção no dia a dia."
+      },
+      "referencia": 3,
+      "recomendacao": "Proteja nascentes e margens de córregos; reduza produtos que prejudicam polinizadores.",
+      "praticas": []
+    }
+  ],
+  "dimensoesConsumidor": [
+    {
+      "id": "alimentos",
+      "titulo": "Alimentos na mesa",
+      "pergunta": "Quanto alimento sua casa desperdiça hoje (sobras, validade, porções)?",
+      "niveis": {
+        "0": "Hoje o desperdício é frequente e grande na rotina da casa.",
+        "1": "Muito alimento vai para o lixo com frequência.",
+        "2": "Ainda há perdas frequentes; pouco planejamento das refeições.",
+        "3": "Algum cuidado, mas ainda se joga fora com regularidade.",
+        "4": "Planeja refeições e reaproveita sobras na maioria das refeições.",
+        "5": "Quase nada desperdiçado; sobras viram nova refeição ou composto."
+      },
+      "referencia": 3,
+      "recomendacao": "Colha ou compre na medida certa, consuma enquanto está fresco e reaproveite sobras com segurança.",
+      "praticas": [
+        "desperdicio"
+      ]
+    },
+    {
+      "id": "aguaCasa",
+      "titulo": "Água em casa",
+      "pergunta": "Como a água é usada hoje em casa (banho, louça, quintal)?",
+      "niveis": {
+        "0": "Uso alto sem economia nem manutenção de torneiras e registros.",
+        "1": "Há desperdício frequente; pouca preocupação com consumo.",
+        "2": "Torneiras ou mangueiras abertas sem necessidade são comuns.",
+        "3": "Cuidados básicos no dia a dia; alguma economia.",
+        "4": "Reaproveita água em algumas tarefas (ex.: lavagem para o quintal).",
+        "5": "Uso consciente e manutenção regular para evitar vazamentos."
+      },
+      "referencia": 3,
+      "recomendacao": "Corrija vazamentos e reduza banho e lavagens desnecessárias.",
+      "praticas": []
+    },
+    {
+      "id": "energiaCasa",
+      "titulo": "Energia em casa",
+      "pergunta": "Como você usa luz e eletrodomésticos hoje em casa?",
+      "niveis": {
+        "0": "Energia consumida sem controle; aparelhos ligados sem necessidade.",
+        "1": "Aparelhos ficam ligados à toa; não há acompanhamento da conta.",
+        "2": "Conta elevada e poucas mudanças de hábito.",
+        "3": "Lâmpadas eficientes em parte da casa; desliga aparelhos às vezes.",
+        "4": "Acompanha a conta e evita picos de consumo.",
+        "5": "Hábitos eficientes e, quando possível, energia renovável."
+      },
+      "referencia": 3,
+      "recomendacao": "Troque lâmpadas, elimine stand-by e programe o uso de eletrodomésticos.",
+      "praticas": []
+    },
+    {
+      "id": "residuosCasa",
+      "titulo": "Resíduos domésticos",
+      "pergunta": "Como você separa e descarta resíduos em casa hoje?",
+      "niveis": {
+        "0": "Tudo vai junto no lixo, sem separação nem reaproveitamento.",
+        "1": "Orgânico e reciclável misturados na maioria das vezes.",
+        "2": "Separação rara ou irregular.",
+        "3": "Separa reciclável; orgânico às vezes.",
+        "4": "Composteira ou coleta seletiva com regularidade.",
+        "5": "Pouco lixo final; orgânico e reciclável bem aproveitados."
+      },
+      "referencia": 3,
+      "recomendacao": "Separe reciclável e orgânico; o que for de cozinha pode virar composto para a horta ou o quintal.",
+      "praticas": [
+        "separacao",
+        "compostagem"
+      ]
+    },
+    {
+      "id": "origem",
+      "titulo": "Origem dos alimentos",
+      "pergunta": "Como você escolhe a origem dos alimentos que consome hoje?",
+      "niveis": {
+        "0": "Compra só pelo preço, sem olhar origem nem produção local.",
+        "1": "Raramente verifica de onde veio o alimento.",
+        "2": "Às vezes pergunta a origem, mas não é hábito.",
+        "3": "Compra local, feira ou horta em casa em parte das vezes.",
+        "4": "Prefere feira, produtor conhecido ou horta própria com regularidade.",
+        "5": "Prioriza local, sazonal e com menos embalagem."
+      },
+      "referencia": 3,
+      "recomendacao": "Aproxime-se de quem produz: feiras, produtores locais ou uma horta em vasos. Pergunte de onde vem o que você come.",
+      "praticas": [
+        "feira",
+        "hortaTerraco"
+      ]
+    }
+  ],
+  "faixas": [
+    {
+      "max": 29,
+      "id": "atencao",
+      "titulo": "Precisa de atenção",
+      "narrativaProdutor": "Hoje várias áreas da propriedade ainda estão frágeis: água, solo, resíduos ou biodiversidade. Este resultado é um mapa para começar, não um veredito: pequenos passos já fazem diferença.",
+      "narrativaConsumidor": "Hoje sua rotina em casa ainda concentra desafios em alimentos, água, energia ou resíduos. Use o gráfico e os cartões abaixo para ver por onde começar. Dá para melhorar com passos simples, sem culpa."
+    },
+    {
+      "max": 49,
+      "id": "transicao",
+      "titulo": "Rumo ao equilíbrio",
+      "narrativaProdutor": "A produção já avança em partes da propriedade, como uma lavoura que cresce, mas água, solo, resíduos e biodiversidade ainda não acompanham esse ritmo. O próximo passo é reforçar as áreas mais fracas sem parar de produzir.",
+      "narrativaConsumidor": "Parte da sua rotina já melhorou, mas alimentos, água, energia e resíduos ainda não formam um conjunto equilibrado. Dá para seguir avançando com passos concretos nos cartões abaixo."
+    },
+    {
+      "max": 74,
+      "id": "equilibrado",
+      "titulo": "Equilibrado",
+      "narrativaProdutor": "Você já combina produção e cuidado ambiental em várias frentes. Refinar as áreas mais fracas ajuda a avançar.",
+      "narrativaConsumidor": "Seus hábitos de hoje já mostram equilíbrio entre conforto e responsabilidade. Reforce as áreas que ainda ficam abaixo da meta."
+    },
+    {
+      "max": 100,
+      "id": "referencia",
+      "titulo": "Referência sustentável",
+      "narrativaProdutor": "Seu manejo indica forte equilíbrio entre produtividade e meio ambiente. Continue monitorando e compartilhando práticas.",
+      "narrativaConsumidor": "Sua rotina atual demonstra consumo e cuidado alinhados ao futuro sustentável. Continue inspirando quem está ao seu redor."
+    }
+  ],
+  "cenariosCampo": {
+    "titulo": "Como sua terra pode ficar nas próximas gerações",
+    "intro": "Simulação educativa com base na sua pontuação (não é previsão oficial). Se o ritmo atual continuar, o campo pode tender a um destes cenários.",
+    "faixasPorScore": [
+      {
+        "max": 29,
+        "id": "alerta",
+        "rotuloCenario": "Alerta para o futuro",
+        "imagem": "./src/assets/images/fotos/cenario-alerta-lencois.jpeg",
+        "altImagem": "Dunas e vegetação seca nos Lençóis Maranhenses, cenário de alerta para recursos naturais",
+        "mensagem": "Se continuar nesse ritmo, nas próximas gerações sua terra pode perder fertilidade, sofrer com seca e produzir cada vez menos. É hora de agir em água, solo e manejo."
+      },
+      {
+        "max": 49,
+        "id": "melhora-lenta",
+        "rotuloCenario": "Lavoura cresce, equilíbrio incompleto",
+        "imagem": "./src/assets/images/fotos/cenario-melhora-lenta.jpeg",
+        "altImagem": "Fileiras de milho jovem em crescimento na propriedade",
+        "mensagem": "Se continuar nesse ritmo, a lavoura pode seguir produzindo, como nesta foto, mas água, solo e áreas verdes ainda ficam para trás. Falta equilíbrio para sustentar as próximas gerações."
+      },
+      {
+        "max": 74,
+        "id": "promissor",
+        "rotuloCenario": "Futuro equilibrado",
+        "imagem": "./src/assets/images/fotos/cenario-promissor-mata-lago.jpeg",
+        "altImagem": "Mata nativa com lago e vegetação ao redor, futuro com água e biodiversidade preservadas",
+        "mensagem": "Se mantiver esse caminho, sua terra tem chance de seguir produtiva e mais equilibrada para filhos e netos que dependem do campo."
+      },
+      {
+        "max": 100,
+        "id": "sustentavel",
+        "rotuloCenario": "Futuro sustentável",
+        "imagem": "./src/assets/images/fotos/cenario-sustentavel-witmarsum.jpeg",
+        "altImagem": "Vacas em pastagem verde em Witmarsum, produção leiteira com equilíbrio ambiental",
+        "mensagem": "Se continuar assim, sua terra pode ser referência de equilíbrio entre produção e natureza, um legado vivo para as próximas gerações."
+      }
+    ]
+  },
+  "praticasCatalogo": {
+    "desperdicio": {
+      "titulo": "Menos comida jogada fora",
+      "texto": "Comprar ou colher na medida certa e consumir enquanto está fresco (como estes tomates) evita sobras. O que sobrar, reaproveite com segurança ou leve ao composto.",
+      "imagem": "./src/assets/images/fotos/pratica-colheita-tomates.jpeg",
+      "alt": "Dois tomates vermelhos recém-colhidos na mão, prontos para ir da horta à mesa",
+      "publico": [
+        "consumidor",
+        "todos"
+      ],
+      "grupo": "casa"
+    },
+    "separacao": {
+      "titulo": "Separar o lixo em casa",
+      "texto": "Vidro, metal, papel e plástico em lixeiras distintas; orgânico à parte pode ir para o composto. Menos volume no aterro e materiais de volta ao ciclo.",
+      "imagem": "./src/assets/images/fotos/pratica-separacao-reciclaveis.jpeg",
+      "alt": "Conjunto de lixeiras coloridas identificadas para vidro, metal, papel e plástico",
+      "publico": [
+        "consumidor",
+        "todos"
+      ],
+      "grupo": "casa"
+    },
+    "feira": {
+      "titulo": "Feiras, artesanato e encontros locais",
+      "texto": "Feiras de alimentos e de produtos artesanais, como esta mesa com colares e cestos, aproximam quem consume de quem produz na região. Perguntar a origem e valorizar o local fortalece o agro e a economia da cidade.",
+      "imagem": "./src/assets/images/fotos/pratica-feira-artesanato.jpeg",
+      "alt": "Mesa com artesanato local: colares de miçangas, cestos de fibra e flauta de bambu em feira de produtos artesanais",
+      "publico": [
+        "consumidor",
+        "todos"
+      ],
+      "grupo": "casa"
+    },
+    "hortaTerraco": {
+      "titulo": "Horta em casa",
+      "texto": "Temperos e hortaliças em vasos ou canteiros na varanda, no quintal ou no terraço trazem frescor à mesa, reduzem embalagem e completam o que você compra ou traz da feira.",
+      "imagem": "./src/assets/images/fotos/pratica-horta-terraco.jpeg",
+      "alt": "Exemplo de horta urbana: terraço com vasos, floreiras e plantas cultivadas em apartamento",
+      "publico": [
+        "consumidor",
+        "todos"
+      ],
+      "grupo": "casa"
+    },
+    "captacao": {
+      "titulo": "Captação e cuidado com a água",
+      "texto": "Instale caixas ou reservatórios para captar água da chuva e use com segurança na irrigação e nas tarefas do campo, protegendo também nascentes e córregos da propriedade.",
+      "imagem": "./src/assets/images/fotos/pratica-caixa-agua-chuva.jpeg",
+      "alt": "Caixa d'água na propriedade rural para captar e armazenar água da chuva",
+      "publico": [
+        "produtor"
+      ],
+      "grupo": "campo"
+    },
+    "silagem": {
+      "titulo": "Silagem bem armazenada",
+      "texto": "Silo bunker coberto com lona conserva milho, sorgo ou capim fermentado: reserva de alimento para o gado na seca, com menos perda.",
+      "imagem": "./src/assets/images/fotos/pratica-silagem-bunker.jpeg",
+      "alt": "Silo bunker coberto com lona plástica para armazenar silagem de milho, sorgo ou capim",
+      "publico": [
+        "produtor"
+      ],
+      "grupo": "campo"
+    },
+    "compostagem": {
+      "titulo": "Compostagem",
+      "texto": "Restos orgânicos da cozinha, do quintal ou da lavoura viram adubo. Menos lixo e nutriente de volta ao solo ou aos vasos da horta.",
+      "imagem": "./src/assets/images/fotos/pratica-compostagem-organicos.jpeg",
+      "alt": "Restos orgânicos de cozinha: cascas, borra de café e sobras separados para compostagem",
+      "publico": [
+        "produtor",
+        "todos"
+      ],
+      "grupo": "campo",
+      "grupoConsumidor": "casa"
+    }
+  },
+  "gruposPraticas": [
+    {
+      "id": "casa",
+      "titulo": "Da origem ao prato e o que sobra",
+      "intro": "Feira, horta, mesa, lixo separado e composto: um fio que liga quem mora na cidade ao que come e ao que descarta."
+    },
+    {
+      "id": "campo",
+      "titulo": "Na propriedade rural"
+    }
+  ],
+  "secaoPraticas": {
+    "produtor": {
+      "titulo": "Sugestões para sua propriedade",
+      "intro": "Ideias para as áreas em que você marcou notas mais baixas, as mesmas prioridades dos cartões de resultado.",
+      "avisoPendente": "Preencha o formulário e revele os cartões do resultado para ver sugestões para o campo.",
+      "avisoVazio": "Suas prioridades estão nos cartões acima. Revise as recomendações de cada área."
+    },
+    "consumidor": {
+      "titulo": "Passos para sua rotina em casa",
+      "intro": "Sugestões para as áreas com notas mais baixas, ligando origem dos alimentos, mesa, resíduos e reaproveitamento no dia a dia urbano.",
+      "avisoPendente": "Preencha o formulário e revele os cartões do resultado para ver sugestões personalizadas.",
+      "avisoVazio": "Suas prioridades estão nos cartões acima. Revise as recomendações de cada área."
+    }
+  },
+  "textosUi": {
+    "tituloAvaliacaoProdutor": "Autoavaliação da propriedade",
+    "tituloAvaliacaoConsumidor": "Autoavaliação da sua rotina em casa",
+    "introAvaliacaoProdutor": "Comece pelo seu nome; isso libera as notas. Em cada área, marque de 0 a 5 conforme a prática de hoje na propriedade (0 = situação crítica). Não é prova: seja honesto.",
+    "introAvaliacaoConsumidor": "Comece pelo seu nome; isso libera as notas. Em cada área, marque de 0 a 5 conforme o que acontece hoje em casa (0 = situação crítica). Não é prova: seja honesto.",
+    "legendaDimensoes": "Marque de 0 a 5 em cada área, conforme a situação de hoje (0 = crítica · 5 = muito equilibrada).",
+    "rotuloEscalaPilulas": "Sua nota hoje (0 a 5):",
+    "nivelPlaceholderDimensao": "Selecione uma nota para ver o que ela significa nesta área hoje.",
+    "tituloResultadoProdutor": "Onde sua propriedade está hoje?",
+    "tituloResultadoConsumidor": "Como estão seus hábitos hoje?",
+    "introResultadoProdutor": "Veja pontuação, narrativa e gráfico abaixo. Vire os três cartões para saber por onde começar.",
+    "introResultadoConsumidor": "Veja pontuação, narrativa e gráfico abaixo. Vire os três cartões com as prioridades de hoje em casa.",
+    "rotuloPontuacao": "Pontuação",
+    "rotuloSituacaoHoje": "Situação",
+    "aguardandoPontuacao": "Aguardando suas notas",
+    "mensagemPerfilProdutor": "Perfil produtor rural selecionado. Autoavaliação liberada abaixo.",
+    "mensagemPerfilConsumidor": "Perfil morador da cidade selecionado. Autoavaliação liberada abaixo.",
+    "erroDadosNaoCarregados": "Os dados da jornada ainda não carregaram. Recarregue a página (F5).",
+    "avisoNomeInicio": "Informe seu nome acima para liberar as notas de 0 a 5 em cada área.",
+    "notaRodapeFormulario": "Primeiro o nome; depois todas as áreas marcadas. O resultado aparece abaixo. Vire cada cartão para revelar. Os dados ficam apenas no seu navegador."
+  }
+}

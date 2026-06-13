@@ -1,0 +1,150 @@
+/* Banner do topo e faixa com frase sobre futuro sustentavel. */
+
+.banner-principal {
+ padding: 4.9rem 0 3.1rem;
+ background:
+ radial-gradient(circle at 20% 20%, var(--cor-banner-destaque-radial), transparent 42%), linear-gradient(180deg, var(--cor-banner-degrade-topo) 0%, var(--cor-fundo) 100%);
+ min-height: calc(83vh - var(--altura-cabecalho));
+ display: flex;
+ align-items: center;
+}
+
+.banner-conteudo {
+ display: grid;
+ grid-template-columns: 1.1fr 0.9fr;
+ gap: 2rem;
+ align-items: center;
+}
+
+.banner-texto {
+ max-width: 58ch;
+ margin-inline: auto;
+}
+
+.selo-tema {
+ font-weight: 700;
+ color: var(--cor-verde);
+}
+
+.banner-principal h1 {
+ font-size: clamp(1.8rem, 2.5vw, 3rem);
+ max-width: 18ch;
+ text-wrap: balance;
+ margin-inline: auto;
+ text-align: center;
+ line-height: 1.24;
+}
+
+.banner-descricao {
+ font-size: 1.07rem;
+ max-width: 58ch;
+ color: var(--cor-banner-descricao);
+ text-align: justify;
+ text-justify: inter-word;
+ margin-inline: auto;
+ hyphens: auto;
+ line-height: 1.72;
+ letter-spacing: 0.01em;
+}
+
+#importancia {
+ padding-top: 6.6rem;
+}
+
+/* Faixa com foto de fundo, frase e efeito parallax. */
+.faixa-futuro-sustentavel {
+ margin-top: -0.4rem;
+ padding: var(--espacamento-bloco-secao) 0;
+ min-height: var(--faixa-altura-minima);
+ position: relative;
+ background-image:
+ linear-gradient(var(--cor-faixa-sobreposicao), var(--cor-faixa-sobreposicao)), var(--imagem-faixa-campo);
+ background-repeat: no-repeat;
+ /* Em paisagem: foto ocupa a largura toda da faixa. */
+ background-size: 100% auto;
+ background-position: var(--faixa-fundo-posicao);
+ background-attachment: fixed;
+ border-top: 1px solid var(--cor-faixa-borda);
+ border-bottom: 1px solid var(--cor-faixa-borda);
+}
+
+.faixa-futuro-sustentavel:not(.faixa-cronometro-agenda) {
+ margin-top: calc(-0.4rem - var(--faixa-frase-deslocamento-superior));
+}
+
+.frase-faixa {
+ margin: 0;
+ text-align: center;
+ color: var(--cor-faixa-texto);
+ font-size: clamp(1.1rem, 2vw, 1.5rem);
+ font-weight: 800;
+ letter-spacing: 0.01em;
+ text-shadow:
+ 0 2px 14px rgba(0, 0, 0, 0.65), 0 0 1px rgba(0, 0, 0, 0.85);
+}
+
+.acoes-banner {
+ margin-top: 1.5rem;
+ display: flex;
+ justify-content: center;
+ gap: 0.75rem;
+}
+
+.banner-painel-visual {
+ display: grid;
+ gap: 0.9rem;
+}
+
+.faixas-destaque-banner {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: 0.7rem;
+}
+
+.faixa-destaque {
+ background: var(--cor-banner-caixa-fundo);
+ border: 1px solid var(--cor-banner-caixa-borda);
+ border-radius: var(--raio-borda-medio);
+ padding: 0.7rem 0.85rem;
+ box-shadow: var(--sombra-padrao);
+}
+
+.faixa-destaque strong {
+ display: block;
+ font-size: 0.92rem;
+ color: var(--cor-verde-escuro);
+}
+
+.faixa-destaque span {
+ display: block;
+ font-size: 0.95rem;
+ font-weight: 700;
+ line-height: 1.35;
+ margin-top: 0.2rem;
+ color: var(--cor-banner-caixa-texto);
+}
+
+.banner-imagem {
+ margin: 0;
+ background: var(--cor-superficie);
+ border-radius: var(--raio-borda);
+ overflow: hidden;
+ box-shadow: var(--sombra-padrao);
+ border: 1px solid var(--cor-borda);
+}
+
+.banner-imagem img {
+ display: block;
+ width: 100%;
+ aspect-ratio: 5 / 4;
+ object-fit: cover;
+ /* Em retrato: recorte mostra a mao na espiga de milho. */
+ object-position: center 68%;
+}
+
+.banner-imagem figcaption {
+ padding: 0.65rem 0.85rem;
+ font-size: 0.9rem;
+ color: var(--cor-texto-secundario);
+ border-top: 1px solid var(--cor-borda);
+}

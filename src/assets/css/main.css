@@ -1,0 +1,25 @@
+/* Arquivo central: importa base, layout, componentes e responsividade nesta ordem. */
+@import url("./base/reset.css");
+@import url("./base/variaveis.css");
+@import url("./base/fontes.css");
+@import url("./base/tipografia.css");
+
+@import url("./layout/cabecalho-rodape.css");
+@import url("./layout/banner-faixa.css");
+
+@import url("./componentes/botoes.css");
+@import url("./componentes/conteudo-cards.css");
+@import url("./componentes/escolha-perfil.css");
+@import url("./componentes/formulario-avaliacao.css");
+@import url("./componentes/grafico.css");
+@import url("./componentes/flash-card.css");
+@import url("./componentes/comparador.css");
+@import url("./componentes/pagina-atribuicoes.css");
+@import url("./componentes/cronometro-agenda.css");
+@import url("./componentes/painel-ods.css");
+@import url("./utilitarios/voltar-topo.css");
+@import url("./utilitarios/acessibilidade.css");
+@import url("./utilitarios/alto-contraste.css");
+@import url("./utilitarios/modo-escuro.css");
+
+@import url("./layout/mediaqueries.css");

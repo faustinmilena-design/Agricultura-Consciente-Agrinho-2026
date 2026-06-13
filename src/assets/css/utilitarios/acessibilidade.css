@@ -1,0 +1,153 @@
+/* Menu flutuante de acessibilidade. Temas em alto-contraste.css e modo-escuro.css. */
+
+@keyframes aparecer-opacidade {
+ from {
+ opacity: 0;
+ transform: translateY(-4px);
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+}
+
+.pular-conteudo {
+ position: absolute;
+ left: -9999px;
+ top: auto;
+ width: 1px;
+ height: 1px;
+ overflow: hidden;
+}
+
+.pular-conteudo:focus {
+ position: fixed;
+ left: 0.75rem;
+ top: 0.75rem;
+ z-index: calc(var(--camada-menu-acessibilidade) + 1);
+ width: auto;
+ height: auto;
+ padding: 0.65rem 1rem;
+ overflow: visible;
+ background: var(--cor-contraste-destaque);
+ color: var(--cor-contraste-fundo);
+ font-weight: 700;
+ text-decoration: none;
+ border-radius: var(--raio-borda-pequeno);
+ box-shadow: var(--sombra-media-acessibilidade);
+}
+
+.menu-acessibilidade {
+ position: fixed;
+ top: calc(var(--altura-cabecalho) + 0.75rem);
+ right: var(--espacamento-grande);
+ z-index: var(--camada-menu-acessibilidade);
+}
+
+.btn-acessibilidade {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: var(--tamanho-botao-acessibilidade);
+ height: var(--tamanho-botao-acessibilidade);
+ background: linear-gradient(
+ 155deg, var(--cor-menu-acessibilidade-claro) 0%, var(--cor-menu-acessibilidade-escuro) 100%
+ );
+ color: var(--cor-texto-sobre-verde);
+ border: 3px solid var(--cor-menu-acessibilidade-borda);
+ border-radius: 50%;
+ cursor: pointer;
+ box-shadow:
+ 0 0 0 1px var(--cor-menu-acessibilidade-sombra-anel), 0 4px 16px var(--cor-menu-acessibilidade-sombra);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-acessibilidade .icone-acessibilidade-img {
+ width: 1.65rem;
+ height: 1.65rem;
+ display: block;
+ object-fit: contain;
+ background: transparent;
+}
+
+.btn-acessibilidade:hover {
+ background: linear-gradient(
+ 155deg, var(--cor-menu-acessibilidade-claro-ao-passar) 0%, var(--cor-menu-acessibilidade-escuro-ao-passar) 100%
+ );
+ transform: scale(1.05);
+}
+
+.btn-acessibilidade.rotacionado {
+ transform: rotate(180deg);
+}
+
+.btn-acessibilidade:focus-visible {
+ outline: 3px solid var(--cor-foco-acessivel);
+ outline-offset: 3px;
+}
+
+.opcoes-acessibilidade {
+ display: none;
+ flex-direction: column;
+ gap: var(--espacamento-pequeno);
+ min-width: var(--largura-minima-painel-acessibilidade);
+ background-color: var(--cor-texto-sobre-verde);
+ padding: var(--espacamento-medio);
+ border-radius: var(--raio-borda-pequeno);
+ box-shadow: var(--sombra-media-acessibilidade);
+ margin-top: var(--espacamento-pequeno);
+}
+
+.opcoes-acessibilidade.ativo {
+ display: flex;
+ animation: aparecer-opacidade 0.3s ease;
+ background: var(--cor-verde-escuro);
+ border: 1px solid rgba(255, 248, 235, 0.25);
+}
+
+.btn-opcao {
+ display: flex;
+ align-items: center;
+ gap: var(--espacamento-pequeno);
+ padding: var(--espacamento-pequeno) var(--espacamento-medio);
+ background-color: rgba(255, 248, 240, 0.96);
+ color: var(--cor-verde-escuro);
+ border: 1px solid rgba(31, 90, 35, 0.22);
+ border-radius: var(--raio-borda-pequeno);
+ cursor: pointer;
+ transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+ font-size: 1rem;
+ text-align: left;
+}
+
+.opcoes-acessibilidade.ativo .btn-opcao:hover:not([aria-pressed="true"]) {
+ background: var(--cor-painel-acessibilidade-fundo-ao-passar);
+ color: var(--cor-texto-sobre-verde);
+ border-color: rgba(160, 235, 200, 0.55);
+}
+
+.opcoes-acessibilidade.ativo .btn-opcao:focus-visible:not([aria-pressed="true"]) {
+ background: var(--cor-painel-acessibilidade-fundo-ao-passar);
+ color: var(--cor-texto-sobre-verde);
+ outline: none;
+ box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.45);
+}
+
+.btn-opcao[aria-pressed="true"] {
+ background: var(--cor-painel-acessibilidade-fundo-ativo);
+ color: var(--cor-texto-sobre-verde);
+ border-color: rgba(120, 220, 180, 0.55);
+ font-weight: 600;
+}
+
+.opcoes-acessibilidade.ativo .btn-opcao[aria-pressed="true"]:hover {
+ background: var(--cor-painel-acessibilidade-fundo-ativo-ao-passar);
+}
+
+.btn-opcao .icone-opcao-img {
+ width: 1.1rem;
+ height: 1.1rem;
+ flex-shrink: 0;
+ object-fit: contain;
+ background: transparent;
+}

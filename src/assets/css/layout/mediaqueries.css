@@ -1,0 +1,329 @@
+/* Responsividade para celular, tablet e monitor */
+
+/* Monitor largo (1500px ou mais): conteudo um pouco mais largo. */
+@media (min-width: 1500px) {
+ .area-central {
+ width: min(100% - 4rem, 1360px);
+ }
+}
+
+/* A partir de 769px: menu do cabecalho em linha (esconde o hamburguer). */
+@media (min-width: 769px) {
+ .btn-menu-cabecalho {
+ display: none;
+ }
+
+ .lista-navegacao {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: center;
+ gap: clamp(0.25rem, 1vw, var(--espacamento-medio));
+ position: static;
+ width: auto;
+ padding: 0;
+ background: none;
+ border: none;
+ box-shadow: none;
+ opacity: 1;
+ transform: none;
+ }
+
+ .item-navegacao {
+ width: auto;
+ }
+
+ .link-navegacao {
+ padding: 0.35rem clamp(0.3rem, 0.9vw, 0.5rem);
+ font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+ white-space: nowrap;
+ }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+ .marca-site {
+ font-size: 1rem;
+ }
+
+ .link-navegacao {
+ font-size: 0.86rem;
+ padding-inline: 0.28rem;
+ }
+}
+
+/* Tablet e notebook estreito (ate 900px): banner e grades em 2 colunas. */
+@media (max-width: 900px) {
+ .banner-principal {
+ min-height: auto;
+ padding: 4.6rem 0 3.2rem;
+ }
+
+ .faixa-futuro-sustentavel {
+ --faixa-frase-deslocamento-superior: clamp(0.75rem, 2.5vh, 1.25rem);
+ padding: 3rem 0;
+ min-height: clamp(9rem, 18vh, 13rem);
+ background-attachment: scroll;
+ background-size: cover;
+ background-position: center calc(50% + var(--faixa-deslocamento-fundo));
+ }
+
+ .faixa-cronometro-agenda {
+ margin: 1rem 0 1.75rem;
+ padding: 2.75rem 0;
+ min-height: clamp(10.5rem, 22vh, 15rem);
+ }
+
+ .cronometro-agenda-numero {
+ font-size: clamp(2.15rem, 10vw, 3rem);
+ }
+
+ .banner-conteudo {
+ grid-template-columns: 1fr;
+ }
+
+ .banner-imagem img {
+ object-position: center 55%;
+ }
+
+ .faixas-destaque-banner {
+ grid-template-columns: 1fr;
+ }
+
+ #importancia .grade-cards {
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ }
+
+ .praticas-grupos-mount .grade-cards {
+ --praticas-colunas: 2;
+ }
+
+ .grade-flash-card {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 1rem;
+ }
+
+ .grade-flash-card > * {
+ flex: 0 1 calc(50% - 0.5rem);
+ width: calc(50% - 0.5rem);
+ max-width: calc(50% - 0.5rem);
+ box-sizing: border-box;
+ }
+
+ .grade-escolha-perfil {
+ grid-template-columns: 1fr;
+ }
+}
+
+/* Celular e tablet em pe (ate 768px): menu hamburguer e rodape compacto. */
+@media (max-width: 768px) {
+ .btn-menu-cabecalho {
+ display: block;
+ }
+
+ .lista-navegacao {
+ position: absolute;
+ top: calc(100% + 0.35rem);
+ right: 0;
+ width: min(var(--largura-menu-suspenso), calc(100vw - 2rem));
+ background-color: var(--cor-cabecalho-fundo);
+ border: 1px solid var(--cor-cabecalho-borda);
+ border-radius: var(--raio-borda-medio);
+ box-shadow: var(--sombra-padrao);
+ flex-direction: column;
+ align-items: stretch;
+ display: none;
+ opacity: 0;
+ transform: translateY(-8px);
+ transition: opacity 0.2s ease, transform 0.2s ease;
+ }
+
+ .lista-navegacao.lista-navegacao-aberta {
+ display: flex;
+ opacity: 1;
+ transform: translateY(0);
+ }
+
+ .link-navegacao {
+ padding: 0.85rem 1.15rem;
+ font-size: 0.95rem;
+ }
+
+ .rodape {
+ padding: var(--espacamento-medio) var(--espacamento-pequeno);
+ padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+ margin-top: var(--espacamento-medio);
+ font-size: 0.9rem;
+ }
+
+ .rodape-so-desktop {
+ display: none;
+ }
+
+ .rodape-container {
+ flex-direction: row;
+ flex-wrap: wrap;
+ align-items: center;
+ gap: 0.5rem 0.75rem;
+ }
+
+ .rodape-info {
+ flex: 1 1 100%;
+ }
+
+ .rodape-titulo-principal {
+ margin-bottom: 0.2rem;
+ font-size: 0.95rem;
+ }
+
+ .rodape-info-resumo {
+ margin-bottom: 0 !important;
+ font-size: 0.84rem;
+ }
+
+ .rodape-info p {
+ margin-bottom: 0.15rem;
+ }
+
+ .rodape-social, .rodape-legal {
+ flex: 0 1 auto;
+ }
+
+ .rodape-legal {
+ flex: 1 1 100%;
+ margin-left: 0;
+ text-align: left;
+ padding-right: 0.25rem;
+ }
+
+ .rodape-legal p {
+ margin-bottom: 0.12rem;
+ font-size: 0.82rem;
+ }
+
+ .rodape-copyright {
+ font-size: 0.8rem;
+ }
+
+ .rodape-nome-rede {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0, 0, 0, 0);
+ white-space: nowrap;
+ border: 0;
+ }
+
+ .rodape-social a, .rodape-social .link-rede-externa {
+ padding: 0.2rem;
+ }
+
+ .rodape-redes-linha {
+ gap: 0.35rem;
+ }
+}
+
+/* Celular (ate 640px): cards em 1 coluna e blocos mais compactos. */
+@media (max-width: 640px) {
+ .faixa-futuro-sustentavel {
+ padding: 2.5rem 0;
+ min-height: clamp(8rem, 16vh, 11rem);
+ --faixa-fundo-posicao: center 35%;
+ background-size: cover;
+ background-attachment: scroll;
+ background-position: center calc(50% + var(--faixa-deslocamento-fundo));
+ }
+
+ .faixa-cronometro-agenda {
+ margin: 0.85rem 0 1.5rem;
+ padding: 2.25rem 0;
+ min-height: clamp(9.5rem, 20vh, 13rem);
+ }
+
+ .frase-faixa, .frase-faixa-cronometro {
+ padding-inline: 0.35rem;
+ }
+
+ .botao-chamada-metodologia {
+ width: 100%;
+ justify-content: center;
+ }
+
+ .bloco-conteudo {
+ padding: 3rem 0;
+ }
+
+ .bloco-conteudo > .area-central > p, .bloco-conteudo-alternado > .area-central > p, .card-conteudo p, .banner-descricao {
+ text-align: left;
+ }
+
+ #avaliacao .escolha-perfil-chamada {
+ text-align: center;
+ }
+
+ #importancia .grade-cards {
+ grid-template-columns: 1fr;
+ }
+
+ .praticas-grupos-mount .grade-cards {
+ --praticas-colunas: 1;
+ }
+
+ .grade-flash-card > * {
+ flex: 1 1 100%;
+ width: 100%;
+ max-width: 100%;
+ }
+
+ .flash-card, .miolo-flash-card {
+ min-height: 260px;
+ }
+
+ /* Menu de acessibilidade mais baixo para nao tapar o banner. */
+ .menu-acessibilidade {
+ top: calc(var(--altura-cabecalho) + 4.5rem);
+ right: var(--espacamento-medio);
+ }
+
+ .btn-acessibilidade {
+ width: var(--tamanho-botao-responsivo);
+ height: var(--tamanho-botao-responsivo);
+ }
+
+ .opcoes-acessibilidade {
+ min-width: var(--largura-minima-painel-acessibilidade);
+ }
+}
+
+/* Celular estreito (ate 480px): cabecalho e rodape menores. */
+@media (max-width: 480px) {
+ .cabecalho-site .cabecalho-conteudo {
+ padding-block: 0.5rem;
+ gap: 0.5rem;
+ }
+
+ .marca-site {
+ font-size: 0.98rem;
+ }
+
+ .area-central {
+ width: min(100% - 1.25rem, var(--largura-maxima-conteudo));
+ }
+
+ .painel-flash-card {
+ padding-inline: 0.65rem;
+ }
+
+ .resultado-score, .narrativa-resultado, .perfil-resultado {
+ padding-inline: 0.15rem;
+ line-height: 1.5;
+ }
+
+ .rodape-container {
+ width: min(100% - 1.25rem, var(--largura-maxima-conteudo));
+ }
+}

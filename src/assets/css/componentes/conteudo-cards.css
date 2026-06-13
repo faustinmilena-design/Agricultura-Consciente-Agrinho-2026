@@ -1,0 +1,121 @@
+/* Cards das secoes Importancia, Praticas e similares. */
+
+.grade-cards {
+ margin-top: 1.5rem;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: stretch;
+ gap: 1.5rem;
+}
+
+/* Importancia: tres cards em largura total da secao */
+#importancia .grade-cards {
+ display: grid;
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+ gap: 1.5rem;
+}
+
+#importancia .grade-cards > .card-conteudo {
+ width: 100%;
+ max-width: none;
+}
+
+/* Praticas: ate 3 cards por linha; centraliza quando so ha 1 ou 2. */
+.praticas-grupos-mount .grade-cards {
+ --praticas-colunas: 3;
+ --praticas-gap-total: calc(1.5rem * (var(--praticas-colunas) - 1));
+ --praticas-largura-card: calc((100% - var(--praticas-gap-total)) / var(--praticas-colunas));
+ justify-content: center;
+}
+
+.praticas-grupos-mount .grade-cards > .card-conteudo {
+ flex: 0 1 var(--praticas-largura-card);
+ width: var(--praticas-largura-card);
+ max-width: var(--praticas-largura-card);
+ min-width: 0;
+ box-sizing: border-box;
+}
+
+.card-conteudo {
+ display: flex;
+ flex-direction: column;
+ background: var(--cor-superficie);
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda);
+ padding: var(--espacamento-medio);
+ box-shadow: var(--sombra-leve);
+}
+
+.card-conteudo-midia {
+ width: 100%;
+ aspect-ratio: 16 / 9;
+ margin-bottom: 0.85rem;
+ border-radius: var(--raio-borda-medio);
+ overflow: hidden;
+ background: var(--cor-superficie-alternada);
+ flex-shrink: 0;
+}
+
+.card-conteudo-midia img {
+ display: block;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.card-conteudo h3 {
+ text-align: center;
+}
+
+.card-conteudo p {
+ text-align: justify;
+ text-justify: inter-word;
+ margin-bottom: 0;
+ flex-grow: 1;
+}
+
+
+.subtitulo-secao {
+ margin-top: 2rem;
+ margin-bottom: 0.5rem;
+ font-size: 1.15rem;
+ text-align: center;
+}
+
+.grade-cards > .subtitulo-secao {
+ flex: 0 0 100%;
+ width: 100%;
+ margin-top: 1.5rem;
+ margin-bottom: 0.25rem;
+}
+
+.grade-cards > .subtitulo-secao:first-child {
+ margin-top: 0;
+}
+
+.grade-cards > .intro-grupo-praticas {
+ flex: 0 0 100%;
+ width: 100%;
+ margin: 0 0 1rem;
+ text-align: center;
+ font-size: 0.98rem;
+ line-height: 1.55;
+ color: var(--cor-texto-secundario);
+}
+
+.praticas-grupos-mount {
+ margin-top: 0.5rem;
+}
+
+.aviso-praticas-pendente {
+ margin: 1rem 0 0;
+ padding: 0.85rem 1rem;
+ text-align: center;
+ font-size: 0.95rem;
+ line-height: 1.5;
+ color: var(--cor-texto-secundario);
+ background: var(--cor-superficie-alternada);
+ border: 1px dashed var(--cor-borda);
+ border-radius: var(--raio-borda-pequeno);
+}

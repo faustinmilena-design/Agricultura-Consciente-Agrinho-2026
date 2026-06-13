@@ -1,0 +1,115 @@
+/* Números do cronometro ate 2030 dentro da faixa tematica. */
+
+
+
+.faixa-cronometro-agenda {
+
+ margin: 1.25rem 0 0;
+
+ padding: var(--faixa-cronometro-padding-bloco) 0;
+
+ min-height: var(--faixa-cronometro-altura-minima);
+
+}
+
+
+
+.frase-faixa-cronometro {
+
+ margin: 0 0 1.1rem;
+
+ text-align: center;
+
+ color: var(--cor-faixa-texto);
+
+ font-size: clamp(1rem, 2.2vw, 1.15rem);
+
+ font-weight: 700;
+
+ letter-spacing: 0.02em;
+
+ text-shadow:
+
+ 0 2px 14px rgba(0, 0, 0, 0.65), 0 0 1px rgba(0, 0, 0, 0.85);
+
+}
+
+
+
+.frase-faixa-cronometro strong {
+
+ font-weight: 800;
+
+ color: var(--cor-cabecalho-marca);
+
+}
+
+
+
+.cronometro-agenda-digitos {
+
+ display: flex;
+
+ flex-wrap: wrap;
+
+ justify-content: center;
+
+ gap: clamp(0.75rem, 3vw, 1.75rem);
+
+ margin: 0;
+
+ padding: 0;
+
+}
+
+
+
+.cronometro-agenda-coluna {
+
+ min-width: 4.5rem;
+
+ text-align: center;
+
+}
+
+
+
+.cronometro-agenda-numero {
+
+ margin: 0;
+
+ font-size: clamp(2.5rem, 8vw, 3.5rem);
+
+ font-weight: 800;
+
+ line-height: 1;
+
+ color: var(--cor-texto-sobre-verde);
+
+ text-shadow:
+
+ 0 2px 16px rgba(0, 0, 0, 0.7), 0 0 2px rgba(0, 0, 0, 0.9);
+
+ font-variant-numeric: tabular-nums;
+
+}
+
+
+
+.cronometro-agenda-rotulo {
+
+ margin: 0.35rem 0 0;
+
+ font-size: 0.95rem;
+
+ font-weight: 700;
+
+ color: var(--cor-cabecalho-marca);
+
+ text-shadow:
+
+ 0 1px 10px rgba(0, 0, 0, 0.65), 0 0 1px rgba(0, 0, 0, 0.85);
+
+}
+
+

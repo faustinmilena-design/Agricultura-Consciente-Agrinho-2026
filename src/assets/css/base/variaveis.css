@@ -1,0 +1,162 @@
+/* Paleta e medidas do site — tudo que se repete fica aqui.
+   Nomes: --cor-*, --espacamento-*, --raio-*, --sombra-*, --camada-* (z-index).
+   Hover: sufixo -ao-passar. Modo escuro e alto contraste redefinem variaveis no body. */
+
+:root {
+ /* --- Tipografia (fontes.css carrega Inter e Kalam) --- */
+ --fonte-corpo: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+ --fonte-titulo: "Kalam", "Inter", "Segoe UI", sans-serif;
+
+ /* --- Cores base do site --- */
+ --cor-fundo: #f6f4ee;
+ --cor-superficie: #ffffff;
+ --cor-superficie-alternada: #edf4ea;
+ --cor-texto: #1f2937;
+ --cor-texto-secundario: #4b5563;
+ --cor-borda: #d6dfd2;
+ --cor-texto-sobre-verde: #ffffff;
+ --cor-verde: #2e7d32;
+ --cor-verde-escuro: #1f5a23;
+ --cor-verde-ao-passar: #358f3a;
+ --cor-foco-acessivel: #8ecae6;
+
+ /* --- Espacos e largura maxima --- */
+ --espacamento-pequeno: 0.5rem;
+ --espacamento-medio: 1rem;
+ --espacamento-grande: 1.5rem;
+ --espacamento-bloco-secao: 4rem;
+ --altura-cabecalho: 72px;
+ --espaco-ancora: calc(var(--altura-cabecalho) + 20px);
+ --largura-maxima-conteudo: 1240px;
+ --largura-menu-suspenso: 200px;
+ --tamanho-icone-menu: 2rem;
+
+ /* --- Camadas (z-index) --- */
+ --camada-cabecalho: 100;
+ --camada-menu-suspenso: 9999;
+ --camada-voltar-topo: 10040;
+ --camada-menu-acessibilidade: 10050;
+
+ /* --- Cantos arredondados --- */
+ --raio-borda-pequeno: 8px;
+ --raio-borda-medio: 12px;
+ --raio-borda: 14px;
+ --raio-pilula-completo: 999px;
+ --raio-etiqueta-comparador: 6px;
+
+ /* --- Sombras --- */
+ --sombra-padrao: 0 10px 24px rgba(31, 41, 55, 0.08);
+ --sombra-leve: 0 4px 10px rgba(15, 23, 42, 0.04);
+ --sombra-botao-chamada: 0 10px 20px rgba(33, 73, 41, 0.18);
+ --sombra-flash-card: 0 8px 18px rgba(0, 0, 0, 0.22);
+ --sombra-flash-card-ao-passar: 0 14px 24px rgba(0, 0, 0, 0.28);
+ --sombra-flash-card-ativo: 0 18px 32px rgba(0, 0, 0, 0.34), 0 0 0 2px rgba(255, 218, 88, 0.32);
+ --sombra-media-acessibilidade: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+ /* --- Cabecalho e rodape (verde escuro) --- */
+ --cor-cabecalho-fundo: rgba(16, 38, 22, 0.96);
+ --cor-cabecalho-borda: #2f4a36;
+ --cor-cabecalho-marca: #d8e9d2;
+ --cor-cabecalho-link: #e8f1e7;
+ --cor-cabecalho-link-fundo-ao-passar: #5b4635;
+ --cor-cabecalho-link-texto-ao-passar: #f5ede3;
+ --cor-rodape-fundo: #102616;
+ --cor-rodape-texto-secundario: #d3e2d1;
+ --cor-rodape-link: #b7e4c7;
+ --cor-rodape-link-ao-passar: #e8f5e9;
+ --cor-rodape-borda-superior: #3d6b4a;
+
+ /* --- Banner do topo --- */
+ --cor-banner-degrade-topo: #f2f6ee;
+ --cor-banner-descricao: #374151;
+ --cor-banner-destaque-radial: rgba(46, 125, 50, 0.12);
+ --cor-banner-caixa-fundo: rgba(255, 255, 255, 0.82);
+ --cor-banner-caixa-borda: #d9e4d5;
+ --cor-banner-caixa-texto: #0f172a;
+
+ /* --- Faixa com foto (frase + cronometro 2030) --- */
+ --cor-faixa-sobreposicao: rgba(6, 18, 10, 0.66);
+ --cor-faixa-borda: rgba(255, 255, 255, 0.4);
+ --cor-faixa-texto: var(--cor-texto-sobre-verde);
+ --imagem-faixa-campo: url("../../images/fotos/faixa-araucarias.jpeg");
+ --faixa-fundo-posicao: center center;
+ --faixa-altura-minima: clamp(10rem, 20vh, 15.5rem);
+ --faixa-frase-deslocamento-superior: clamp(1rem, 5vh, 2.5rem);
+ --faixa-cronometro-padding-bloco: 3.15rem;
+ --faixa-cronometro-altura-minima: clamp(11.5rem, 24vh, 17.5rem);
+
+ /* --- Botoes --- */
+ --cor-botao-chamada-fundo: #f4f0e8;
+ --cor-botao-chamada-fundo-ao-passar: #efe8dc;
+ --cor-botao-chamada-texto: #1f3a24;
+ --cor-painel-ods-item-borda: #2f6a43;
+
+ /* Botao "Topo" — cores padrao; modo escuro e alto contraste redefinem no body */
+ --cor-voltar-topo-fundo: var(--cor-verde);
+ --cor-voltar-topo-texto: var(--cor-texto-sobre-verde);
+ --cor-voltar-topo-borda: transparent;
+ --cor-voltar-topo-fundo-ao-passar: var(--cor-verde-ao-passar);
+
+ /* --- Aviso do formulario --- */
+ --cor-aviso-fundo: #fff8e6;
+ --cor-aviso-borda: #e6c200;
+ --cor-aviso-texto: #5c4a00;
+
+ /* --- Grafico de barras --- */
+ --cor-grafico-hoje-inicio: #64b5f6;
+ --cor-grafico-hoje-fim: #1565c0;
+ --cor-grafico-hoje-sombra: rgba(21, 101, 192, 0.35);
+ --cor-grafico-meta-inicio: #aed581;
+ --cor-grafico-meta-fim: #558b2f;
+ --cor-grafico-meta-borda: #33691e;
+
+ /* --- Flash-cards do resultado --- */
+ --cor-flash-card-painel-1: #7aab5c;
+ --cor-flash-card-painel-2: #6a9a4f;
+ --cor-flash-card-painel-3: #5d8d44;
+ --cor-flash-card-texto-painel: #f8fff2;
+ --cor-flash-card-fundo: #6f3a12;
+ --cor-flash-card-borda: rgba(255, 255, 255, 0.28);
+ --cor-flash-card-borda-ao-passar: #ffe270;
+ --cor-flash-card-borda-ativo: #ffda58;
+ --cor-flash-card-destaque: #e8f5c9;
+ --cor-flash-card-texto-suave: rgba(255, 255, 255, 0.9);
+
+ /* --- Comparador antes/depois --- */
+ --cor-comparador-texto: var(--cor-texto-sobre-verde);
+ --cor-comparador-divisor-anel: rgba(0, 0, 0, 0.15);
+ --cor-comparador-etiqueta-sombra-texto: rgba(0, 0, 0, 0.6);
+ --cor-comparador-etiqueta-fundo: rgba(0, 0, 0, 0.35);
+
+ /* --- Escolha de perfil --- */
+ --cor-escolha-perfil-ativo-anel: rgba(46, 125, 50, 0.2);
+
+ /* --- Simulacao do futuro (bordas por cenario) --- */
+ --cor-simulacao-alerta-borda: #b45309;
+ --cor-simulacao-melhora-lenta-borda: #ca8a04;
+ --cor-simulacao-sustentavel-borda: #1b5e20;
+
+ /* --- Painel das 17 ODS --- */
+ --cor-painel-ods-fundo: #f4faeb;
+ --cor-painel-ods-borda: #cfe2c1;
+
+ /* --- Menu de acessibilidade --- */
+ --cor-menu-acessibilidade-claro: #3d9a46;
+ --cor-menu-acessibilidade-escuro: var(--cor-verde-escuro);
+ --cor-menu-acessibilidade-claro-ao-passar: var(--cor-verde);
+ --cor-menu-acessibilidade-escuro-ao-passar: var(--cor-verde-ao-passar);
+ --cor-menu-acessibilidade-borda: rgba(255, 255, 255, 0.94);
+ --cor-menu-acessibilidade-sombra-anel: rgba(31, 90, 35, 0.35);
+ --cor-menu-acessibilidade-sombra: rgba(16, 38, 22, 0.4);
+ --cor-painel-acessibilidade-fundo-ao-passar: linear-gradient(160deg, #58c090 0%, #42a578 100%);
+ --cor-painel-acessibilidade-fundo-ativo: linear-gradient(160deg, #2f9a72 0%, #248a64 100%);
+ --cor-painel-acessibilidade-fundo-ativo-ao-passar: linear-gradient(160deg, #3aab7f 0%, #2f9a72 100%);
+ --tamanho-botao-acessibilidade: 3rem;
+ --tamanho-botao-responsivo: 2.75rem;
+ --largura-minima-painel-acessibilidade: 11.5rem;
+
+ /* --- Alto contraste e modo escuro --- */
+ --cor-contraste-fundo: #000000;
+ --cor-contraste-destaque: #ffff00;
+ --cor-fundo-escuro-acessivel: #1a1a1a;
+}

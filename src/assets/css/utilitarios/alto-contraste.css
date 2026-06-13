@@ -1,0 +1,373 @@
+/* Alto contraste: preto, branco e amarelo para facilitar a leitura. */
+
+body.alto-contraste {
+ background-color: var(--cor-contraste-fundo) !important;
+ background-image: none !important;
+ color: var(--cor-texto-sobre-verde);
+
+ --cor-voltar-topo-fundo: var(--cor-contraste-destaque);
+ --cor-voltar-topo-texto: var(--cor-contraste-fundo);
+ --cor-voltar-topo-borda: var(--cor-texto-sobre-verde);
+ --cor-voltar-topo-fundo-ao-passar: var(--cor-texto-sobre-verde);
+}
+
+body.alto-contraste .cabecalho-site, body.alto-contraste .rodape {
+ background-color: var(--cor-contraste-fundo) !important;
+ color: var(--cor-contraste-destaque);
+ border-color: var(--cor-contraste-destaque);
+}
+
+body.alto-contraste .marca-site, body.alto-contraste .link-navegacao, body.alto-contraste a {
+ color: var(--cor-contraste-destaque);
+}
+
+body.alto-contraste .link-navegacao:hover, body.alto-contraste .link-navegacao:focus-visible {
+ background-color: var(--cor-contraste-destaque) !important;
+ color: var(--cor-contraste-fundo) !important;
+}
+
+body.alto-contraste .marca-site:hover, body.alto-contraste .marca-site:focus-visible {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .btn-menu-cabecalho:hover, body.alto-contraste .btn-menu-cabecalho:focus-visible {
+ background-color: var(--cor-contraste-destaque) !important;
+ color: var(--cor-contraste-fundo) !important;
+}
+
+body.alto-contraste a:hover, body.alto-contraste a:focus-visible {
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.alto-contraste .link-navegacao:hover, body.alto-contraste .link-navegacao:focus-visible, body.alto-contraste .btn-menu-cabecalho:hover, body.alto-contraste .btn-menu-cabecalho:focus-visible {
+ color: var(--cor-contraste-fundo) !important;
+}
+
+body.alto-contraste .lista-navegacao {
+ background-color: var(--cor-contraste-fundo);
+ border-color: var(--cor-contraste-destaque);
+}
+
+body.alto-contraste main, body.alto-contraste .banner-principal {
+ background-color: transparent !important;
+ background-image: none !important;
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.alto-contraste .bloco-conteudo {
+ background-color: transparent !important;
+ background-image: none !important;
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.alto-contraste .bloco-conteudo-alternado {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ background-image: none !important;
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.alto-contraste h1, body.alto-contraste h2, body.alto-contraste h3, body.alto-contraste p, body.alto-contraste li, body.alto-contraste label, body.alto-contraste legend, body.alto-contraste .pergunta-dimensao, body.alto-contraste .nivel-dimensao-descricao {
+ color: var(--cor-texto-sobre-verde);
+}
+
+body.alto-contraste .selo-tema, body.alto-contraste .subtitulo-secao, body.alto-contraste .perfil-selecionado-msg, body.alto-contraste #avaliacao .escolha-perfil-chamada, body.alto-contraste .faixa-destaque strong {
+ color: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .bloco-introducao-ods p, body.alto-contraste .bloco-introducao-ods .intro-ods-lead, body.alto-contraste .bloco-introducao-ods .intro-ods-instrucao {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .bloco-introducao-ods strong {
+ color: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .titulo-painel-ods {
+ color: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .texto-instrucao-painel-ods {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .faixa-destaque span {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .card-conteudo, body.alto-contraste .card-conteudo-midia, body.alto-contraste .painel-grafico, body.alto-contraste .banner-imagem, body.alto-contraste #formulario-avaliacao, body.alto-contraste #resultado .area-central, body.alto-contraste .painel-ods, body.alto-contraste .item-painel-ods, body.alto-contraste .caixa-explicacao-painel-ods, body.alto-contraste .aviso-praticas-pendente {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .faixa-destaque, body.alto-contraste .banner-imagem figcaption {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste input, body.alto-contraste select, body.alto-contraste textarea {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste input::placeholder {
+ color: var(--cor-texto-sobre-verde);
+ opacity: 0.85;
+}
+
+body.alto-contraste .pilula-nota {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .pilula-nota-ativa, body.alto-contraste .botao-chamada-metodologia {
+ background-color: var(--cor-contraste-destaque) !important;
+ color: var(--cor-contraste-fundo) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+/* Cartões de perfil no alto contraste: hover e ativo ficam amarelos. */
+body.alto-contraste .cartao-escolha-perfil-com-foto {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil-com-foto strong {
+ color: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil-com-foto .cartao-escolha-perfil-texto > span, body.alto-contraste .cartao-escolha-perfil-com-foto .cartao-escolha-perfil-acao {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil-com-foto .cartao-escolha-perfil-midia, body.alto-contraste .cartao-escolha-perfil-com-foto .cartao-escolha-perfil-acao {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ border-top: 1px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil-com-foto:hover, body.alto-contraste .cartao-escolha-perfil-com-foto:focus-visible, body.alto-contraste .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo {
+ background-color: var(--cor-contraste-destaque) !important;
+ border-color: var(--cor-contraste-destaque) !important;
+ transform: none !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil-com-foto:hover strong, body.alto-contraste .cartao-escolha-perfil-com-foto:focus-visible strong, body.alto-contraste .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo strong, body.alto-contraste .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-texto > span, body.alto-contraste .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-texto > span, body.alto-contraste .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-texto > span, body.alto-contraste .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-acao, body.alto-contraste .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-acao, body.alto-contraste .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-acao {
+ color: var(--cor-contraste-fundo) !important;
+}
+
+body.alto-contraste .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-midia, body.alto-contraste .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-midia, body.alto-contraste .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-midia, body.alto-contraste .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-acao, body.alto-contraste .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-acao, body.alto-contraste .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-acao {
+ background-color: transparent !important;
+ border-top-color: color-mix(in srgb, var(--cor-contraste-fundo) 35%, transparent) !important;
+}
+
+body.alto-contraste .dica-contexto-perfil, body.alto-contraste .aviso-nome-resultado {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ border: none !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .dica-contexto-perfil {
+ padding: 0.65rem 0.5rem 0.85rem;
+}
+
+body.alto-contraste #avaliacao #intro-avaliacao, body.alto-contraste #avaliacao #titulo-avaliacao, body.alto-contraste #formulario-avaliacao label, body.alto-contraste #formulario-avaliacao legend, body.alto-contraste #formulario-avaliacao p, body.alto-contraste #formulario-avaliacao h3, body.alto-contraste #formulario-avaliacao .rotulo-escala-pilulas, body.alto-contraste #formulario-avaliacao .nivel-dimensao-descricao, body.alto-contraste #formulario-avaliacao .nota-formulario {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .fieldset-dimensoes-bloqueado {
+ opacity: 1 !important;
+}
+
+body.alto-contraste .fieldset-dimensoes-bloqueado .pilula-nota {
+ opacity: 0.55;
+}
+
+body.alto-contraste .cartao-dimensao {
+ background-color: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+}
+
+body.alto-contraste .painel-flash-card {
+ background: var(--cor-fundo-escuro-acessivel) !important;
+ background-image: none !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .titulo-flash-card-painel, body.alto-contraste .intro-flash-card-painel, body.alto-contraste .progresso-flash-card {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .flash-card {
+ border-color: var(--cor-contraste-destaque) !important;
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .flash-card:hover, body.alto-contraste .flash-card:focus-visible, body.alto-contraste .flash-card-ativo {
+ border-color: var(--cor-texto-sobre-verde) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .categoria-flash-card, body.alto-contraste .titulo-flash-card-area, body.alto-contraste .dica-virar-flash-card {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .frente-flash-card, body.alto-contraste .verso-flash-card, body.alto-contraste .texto-verso-flash-card, body.alto-contraste .texto-verso-flash-card p {
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .flash-card-nota, body.alto-contraste .flash-card-destaque {
+ color: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .faixa-futuro-sustentavel, body.alto-contraste .faixa-cronometro-agenda {
+ border: 2px solid var(--cor-contraste-destaque);
+}
+
+body.alto-contraste .frase-faixa, body.alto-contraste .frase-faixa-cronometro, body.alto-contraste .frase-faixa strong, body.alto-contraste .frase-faixa-cronometro strong, body.alto-contraste .cronometro-agenda-numero, body.alto-contraste .cronometro-agenda-rotulo {
+ color: var(--cor-contraste-destaque) !important;
+ text-shadow: none;
+}
+
+body.alto-contraste .comparador-educativo, body.alto-contraste .simulacao-futuro-campo {
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .comparador-alca::before {
+ background: var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .comparador-alca-polegar {
+ background: var(--cor-contraste-destaque) !important;
+ border-color: var(--cor-texto-sobre-verde) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .comparador-icone-arraste {
+ filter: brightness(0);
+}
+
+body.alto-contraste .comparador-etiqueta {
+ background: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-contraste-destaque) !important;
+ border: 2px solid var(--cor-contraste-destaque);
+ text-shadow: none;
+}
+
+body.alto-contraste .comparador-legenda-futuro {
+ color: var(--cor-texto-sobre-verde) !important;
+ background: transparent !important;
+}
+
+body.alto-contraste .grafico-barra-usuario, body.alto-contraste .grafico-barra-meta {
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ background: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .grafico-legenda, body.alto-contraste .grafico-par-legenda, body.alto-contraste .grafico-par-legenda span, body.alto-contraste .comparador-legenda-futuro, body.alto-contraste .comparador-legenda-score {
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .item-painel-ods.ods-nucleo-jornada, body.alto-contraste .item-painel-ods.ods-destaque-campo {
+ border-color: var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+ background: var(--cor-fundo-escuro-acessivel) !important;
+}
+
+body.alto-contraste .item-painel-ods--cor-2, body.alto-contraste .item-painel-ods--cor-6, body.alto-contraste .item-painel-ods--cor-7, body.alto-contraste .item-painel-ods--cor-12, body.alto-contraste .item-painel-ods--cor-13, body.alto-contraste .item-painel-ods--cor-15 {
+ background: var(--cor-fundo-escuro-acessivel) !important;
+}
+
+body.alto-contraste .botao-voltar-topo {
+ box-shadow: none !important;
+}
+
+body.alto-contraste .btn-acessibilidade, body.alto-contraste .btn-opcao, body.alto-contraste .btn-menu-cabecalho {
+ border-color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .botao-chamada-metodologia:hover, body.alto-contraste .botao-chamada-metodologia:focus-visible {
+ background-color: var(--cor-texto-sobre-verde) !important;
+ color: var(--cor-contraste-fundo) !important;
+ border-color: var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .pilula-nota:hover {
+ border-color: var(--cor-texto-sobre-verde) !important;
+ background-color: var(--cor-fundo-escuro-acessivel) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .opcoes-acessibilidade.ativo {
+ background: var(--cor-contraste-fundo) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .opcoes-acessibilidade.ativo .btn-opcao {
+ background: var(--cor-contraste-destaque) !important;
+ color: var(--cor-contraste-fundo) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .opcoes-acessibilidade.ativo .btn-opcao[aria-pressed="true"] {
+ background: var(--cor-contraste-fundo) !important;
+ color: var(--cor-contraste-destaque) !important;
+ border: 2px solid var(--cor-contraste-destaque) !important;
+}
+
+body.alto-contraste .opcoes-acessibilidade.ativo .btn-opcao:hover:not([aria-pressed="true"]) {
+ background: var(--cor-texto-sobre-verde) !important;
+ color: var(--cor-contraste-fundo) !important;
+}
+
+body.alto-contraste .btn-acessibilidade {
+ border: 3px solid var(--cor-contraste-destaque) !important;
+ background: var(--cor-contraste-fundo) !important;
+ color: var(--cor-texto-sobre-verde) !important;
+ box-shadow: none !important;
+}
+
+body.alto-contraste .btn-acessibilidade:hover, body.alto-contraste .btn-acessibilidade:focus-visible {
+ background: var(--cor-contraste-fundo) !important;
+ border-color: var(--cor-texto-sobre-verde) !important;
+}
+
+body.alto-contraste .btn-acessibilidade .icone-acessibilidade-img, body.alto-contraste .btn-opcao .icone-opcao-img {
+ background: transparent !important;
+ border: none;
+ box-shadow: none;
+ filter: none;
+}
+
+/* Icone do botão ativo: inverte cores para continuar visivel no fundo preto. */
+body.alto-contraste .opcoes-acessibilidade.ativo .btn-opcao[aria-pressed="true"] .icone-opcao-img:not([src*="acessibilidade"]) {
+ filter: invert(1);
+}
+
+body.alto-contraste .pular-conteudo:focus {
+ background: var(--cor-contraste-destaque);
+ color: var(--cor-contraste-fundo);
+ outline: 2px solid var(--cor-texto-sobre-verde);
+}

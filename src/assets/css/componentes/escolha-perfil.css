@@ -1,0 +1,192 @@
+/* Cartões para escolher perfil produtor ou consumidor. */
+
+#avaliacao .escolha-perfil-chamada {
+ margin: 1.25rem auto 2rem;
+ max-width: none;
+ text-align: center;
+ font-weight: 700;
+ font-size: 1rem;
+ color: var(--cor-verde-escuro);
+}
+
+.grade-escolha-perfil {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ align-items: stretch;
+ gap: 1.5rem;
+ margin-top: 0;
+}
+
+.cartao-escolha-perfil {
+ text-align: left;
+ background: var(--cor-superficie);
+ border: 2px solid var(--cor-borda);
+ border-radius: var(--raio-borda);
+ padding: 1.1rem 1.2rem;
+ cursor: pointer;
+ box-shadow: var(--sombra-leve);
+ transition:
+ border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+ font: inherit;
+ color: inherit;
+}
+
+.cartao-escolha-perfil strong {
+ display: block;
+ font-size: 1.05rem;
+ color: var(--cor-verde-escuro);
+ margin-bottom: 0.35rem;
+}
+
+.cartao-escolha-perfil-texto > span {
+ display: block;
+ font-size: 0.92rem;
+ color: var(--cor-texto-secundario);
+ line-height: 1.45;
+}
+
+.cartao-escolha-perfil:focus-visible {
+ outline: 3px solid var(--cor-foco-acessivel);
+ outline-offset: 3px;
+}
+
+.perfil-selecionado-msg {
+ margin-top: 1rem;
+ text-align: center;
+ font-weight: 600;
+ color: var(--cor-verde-escuro);
+}
+
+/* Cartao com foto na escolha de perfil. */
+.cartao-escolha-perfil-com-foto {
+ display: flex;
+ flex-direction: column;
+ padding: 0;
+ overflow: hidden;
+ border-color: color-mix(in srgb, var(--cor-verde) 28%, var(--cor-borda));
+ box-shadow: var(--sombra-padrao);
+}
+
+.cartao-escolha-perfil-texto {
+ flex: 0 0 auto;
+ min-height: 6.25rem;
+ padding: 0.85rem 1.2rem 0.75rem;
+ box-sizing: border-box;
+}
+
+.cartao-escolha-perfil-texto strong {
+ margin-bottom: 0.3rem;
+}
+
+.cartao-escolha-perfil-midia {
+ flex: 0 0 auto;
+ display: block;
+ width: 100%;
+ aspect-ratio: 16 / 9;
+ overflow: hidden;
+ background: var(--cor-superficie-alternada);
+ border-top: 1px solid var(--cor-borda);
+}
+
+.cartao-escolha-perfil-img {
+ display: block;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ pointer-events: none;
+}
+
+.cartao-escolha-perfil-img--produtor {
+ object-position: center 58%;
+}
+
+.cartao-escolha-perfil-img--consumidor {
+ object-position: center center;
+}
+
+.cartao-escolha-perfil-acao {
+ flex: 0 0 auto;
+ display: block;
+ width: 100%;
+ margin: 0;
+ padding: 0.72rem 1rem;
+ border: 0;
+ border-top: 1px solid var(--cor-borda);
+ background: var(--cor-superficie-alternada);
+ text-align: center;
+ font-size: 0.92rem;
+ font-weight: 700;
+ color: var(--cor-verde-escuro);
+ transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Repouso: cartoes simetricos (texto alinhado, imagem 16:9, faixa igual) */
+
+/* Hover, foco ou ativo: o cartao inteiro muda de cor junto. */
+.cartao-escolha-perfil-com-foto:hover, .cartao-escolha-perfil-com-foto:focus-visible {
+ border-color: var(--cor-verde);
+ background: var(--cor-verde);
+ box-shadow: var(--sombra-padrao);
+ transform: translateY(-3px);
+ outline: none;
+}
+
+.cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo {
+ border-color: var(--cor-verde);
+ background: var(--cor-verde);
+ box-shadow: 0 0 0 3px var(--cor-escolha-perfil-ativo-anel), var(--sombra-padrao);
+ transform: translateY(-1px);
+}
+
+.cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-texto strong, .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-texto strong, .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-texto strong, .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-texto > span, .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-texto > span, .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-texto > span, .cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-acao, .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-acao, .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-acao {
+ color: var(--cor-texto-sobre-verde);
+}
+
+.cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-midia, .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-midia, .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-midia {
+ border-top-color: color-mix(in srgb, var(--cor-texto-sobre-verde) 30%, transparent);
+ background: transparent;
+}
+
+.cartao-escolha-perfil-com-foto:hover .cartao-escolha-perfil-acao, .cartao-escolha-perfil-com-foto:focus-visible .cartao-escolha-perfil-acao, .cartao-escolha-perfil-com-foto.cartao-escolha-perfil-ativo .cartao-escolha-perfil-acao {
+ background: transparent;
+ border-top-color: color-mix(in srgb, var(--cor-texto-sobre-verde) 30%, transparent);
+}
+
+#formulario-avaliacao:not([hidden]) {
+ margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+ .grade-escolha-perfil {
+ gap: 0.85rem;
+ }
+
+ .cartao-escolha-perfil {
+ width: 100%;
+ -webkit-tap-highlight-color: transparent;
+ }
+
+ .cartao-escolha-perfil-texto {
+ min-height: 6.75rem;
+ padding: 0.95rem 1.05rem 0.7rem;
+ }
+
+ .cartao-escolha-perfil strong {
+ font-size: 1rem;
+ }
+
+ .cartao-escolha-perfil-texto > span {
+ font-size: 0.9rem;
+ line-height: 1.5;
+ }
+}
+
+@media (max-width: 480px) {
+ .cartao-escolha-perfil-com-foto:hover, .cartao-escolha-perfil-com-foto:focus-visible {
+ transform: none;
+ }
+
+ .grade-escolha-perfil {
+ grid-template-columns: 1fr;
+ }
+}
