@@ -42,10 +42,10 @@ Fotografias, textos da jornada e demais créditos: [`atribuicoes.html`](atribuic
 └── src/assets/   (css, js, dados, imagens)
 ```
 
-## 🌍 Demonstração online
+## 🌍 Demonstração/visualização online
 
 - 🔗 [GitHub Pages](https://faustinmilena-design.github.io/Agricultura-Consciente-Agrinho-2026/)
-- 🔗 [Vercel](https://agricultura-consciente-agrinho-2026.vercel.app/)
+- 🔗 [Vercel](https://agricultura-consciente-agrinho-2026-rho.vercel.app/)
 - 📦 [Repositório](https://github.com/faustinmilena-design/Agricultura-Consciente-Agrinho-2026)
 - 👤 [Perfil da autora](https://github.com/faustinmilena-design)
 
