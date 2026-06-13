@@ -1,6 +1,6 @@
 /* Paleta e medidas do site — tudo que se repete fica aqui.
    Nomes: --cor-*, --espacamento-*, --raio-*, --sombra-*, --camada-* (z-index).
-   Hover: sufixo -ao-passar. Modo escuro e alto contraste redefinem variaveis no body. */
+   Hover: -ao-passar. Modo escuro e alto contraste redefinem variaveis no body. */
 
 :root {
  /* --- Tipografia (fontes.css carrega Inter e Kalam) --- */

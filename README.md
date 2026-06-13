@@ -18,6 +18,7 @@
 ## 🧰 Ferramentas usadas
 
 - [Canva](https://www.canva.com/), ícones da interface e referências visuais (criação autoral)
+- [Contrast Ratio](https://contrast-ratio.org/), teste das cores do alto contraste (amarelo, preto e branco)
 - [Figma](https://www.figma.com/) e [Lovable](https://lovable.dev/), referências de layout adaptadas ao projeto
 - [Alura](https://www.alura.com.br/), inspiração para gráfico, cronômetro e flash-cards
 - [Piskel](https://www.piskelapp.com/) + [FreeConvert](https://www.freeconvert.com/pt/gif-to-ico), logo do projeto e conversão para favicon
